@@ -1,0 +1,129 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+@import 'born-ready/born-ready';
+// ------- FONTS -------
+
+$font-family: 'Lato', sans-serif;
+$font-custom: 'Lato', sans-serif;
+$font-special: 'born_ready_altregular', sans-serif;
+
+$font: normal 16px/26px $font-family;
+$font-heading: 300 26px/32px $font-custom;
+$font-maxheading: 300 50px/60px $font-custom;
+$font-subheading: 400 20px/32px $font-custom;
+$fa-font-path: "../fonts";
+$font-icon: "FontAwesome";
+
+// ------- MAIN ICON MIXIN -------
+
+@mixin addIcon($content) {
+  font-family: $font-icon;
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+}
+
+@mixin addChappsIcon($content, $font-size: inherit) {
+  font-family: "fl-chapps";
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-size: $font-size;
+}
+
+@mixin addMaterialIcon($content, $font-size: inherit) {
+  font-family: 'Material Icons';
+  content: $content;
+  display: inline-block;
+  font-weight: normal;
+  font-size: $font-size;
+}
+
+// ------- MAIN COLORS --------
+
+$color-base: #767676;
+$color-primary: #009fe3;
+$color-dark: #2c2c2f;
+$color-light: #FFFFFF;
+$color-gray: #b3b3b3;
+$color-gray-darken: #a1a1a1;
+$color-succes: #05d484;
+$color-warning: #fe5b66;
+$color-box: #f8f8f8;
+$color-sale: #c476ea;
+
+// ------- BORDERS ---------
+
+$base-border-color: #ebebeb;
+$table-border-color: $base-border-color;
+$main_border: 1px solid $base-border-color;
+$dark-border-color: $color-dark;
+$light-border-color: $color-light;
+$primary-border-color: $color-primary;
+$secondary-border-color: #eae6da;
+
+// ------- BACKGROUNDS -------
+
+$base-box-bg: $color-box;
+$table-background: $base-box-bg;
+$dark-background: $color-dark;
+$light-background: $color-light;
+$primary-background: $color-primary;
+$olark-heading-bg: $primary-background;
+$product-background: #FFFFFF;
+
+// ------- COLORS -------
+
+$base-body-color: $color-base;
+$base-text-color: $color-base;
+$light-text-color: $color-light;
+$dark-text-color: $color-dark;
+$primary-text-color: $color-primary;
+
+$base-heading-color: $color-dark;
+$base-title-color: $base-text-color;
+
+$link-color: $color-base;
+$link-hover-color: $primary-text-color;
+
+// ------- Cart Steps On Page Checkout --------
+
+$cs-border-radius: 0;
+$step-todo-bg: $base-box-bg;
+$step-todo-border-color: darken($step-todo-bg, 15);
+$step-current-bg: $primary-background;
+$step-current-border-color: $step-current-bg;
+$step-done-bg: $dark-background;
+$step-done-border-color: $step-done-bg;
+$step-hover-bg: darken($step-done-bg, 15);
+$step-hover-border-color: darken($step-hover-bg, 15);
+
+// ------- Border radius on --inputs--selects--buttons--itc----------
+
+$border-radius-base: 0px;
+$border-radius-small: 3px;
+
+
+// ------- Font mixin ---------
+
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {List}            - text-shadow list
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+   @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+/// Stroke font-character
+/// @param  {Integer} $stroke - Stroke width
+/// @param  {Color}   $color  - Stroke color
+/// @return {Style}           - text-shadow
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}

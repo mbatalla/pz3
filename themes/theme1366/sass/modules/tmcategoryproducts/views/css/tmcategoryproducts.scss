@@ -1,0 +1,78 @@
+@import "../../../../_theme_variables";
+
+.category-block ul.product_list.grid > li.first-in-line, .category-block ul.product_list.grid > li.first-item-of-mobile-line, .category-block ul.product_list.grid > li.first-item-of-tablet-line {
+  clear: none !important;
+}
+
+.category-block {
+  margin-top: 15px;
+  margin-bottom: 0;
+  @media (min-width: $screen-xs-min) {
+    margin-top: 50px;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin-top: 112px;
+  }
+  h4 {
+    position: relative;
+    font: $font-heading;
+    color: $base-heading-color;
+    text-align: center;
+    padding-bottom: 12px;
+    margin-bottom: 26px;
+    padding-right: 0;
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 50px;
+    }
+    &:after {
+      display: none;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100px;
+      margin-left: -50px;
+      border-bottom: 2px solid darken(desaturate(adjust_hue($color-primary, 12.324), 38.008%), 1.372%);
+    }
+  }
+  ul.product_list.grid > li {
+    .product-container .right-block {
+      @media (min-width: $screen-md-min) {
+        padding-top: 34px;
+      }
+    }
+  }
+  .bx-viewport > ul {
+    margin: 0;
+    > li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .bx-wrapper .bx-controls-direction a {
+    height: 50px;
+    width: 50px;
+    color: $dark-text-color;
+    text-align: center;
+    &:before {
+      @include addIcon('\f105');
+      font-size: 37px;
+      line-height: 50px;
+      color: inherit;
+    }
+    &.bx-prev {
+      left: 0;
+      &:before {
+        content: '\f104';
+      }
+    }
+    &.bx-next {
+      right: 0;
+    }
+    &:hover {
+      color: $primary-text-color;
+    }
+  }
+}

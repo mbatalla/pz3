@@ -1,0 +1,177 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- Pagination Buttons --- +/- Buttons and Input --- Pagination Buttons --------
+// width and height for input, buttons, line-height for label
+
+$input-label-button-size: 60px;
+
+// ------- BOX ELEMENTS ON SUB PAGES -------
+
+@mixin box-style {
+  background: $light-background;
+  padding: 14px 18px 13px;
+  margin: 0 0 30px 0;
+  font: normal 13px/23px $font-custom;
+  @include border-radius($border-radius-base);
+  @include box-shadow(0px 7px 21px 0px rgba(0, 0, 0, 0.08));
+}
+
+// ------- PopUp Elements(layered cart, newsletter, quick view ... ) -------
+
+@mixin popup-box-style {
+  background: $light-background;
+  @include box-shadow (0 1px 16px rgba(16, 39, 71, 0.5));
+  border: none;
+  @include border-radius($border-radius-base);
+  z-index: 99999;
+}
+
+@mixin popup-overlay-style {
+  background: rgba(#000000, 0.7);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+  overflow: hidden;
+  @include transition(0.3s opacity ease);
+}
+
+@mixin popup-close-button {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+  line-height: 30px;
+  background-image: none;
+  @include transition(0.3s all ease);
+  &:before {
+    @include addMaterialIcon('\e5cd', 16px);
+  }
+  &:hover {
+    color: $primary-text-color;
+  }
+}
+
+// ------- PRODUCT ELEMENTS -------
+
+// ------- Product name -------
+
+$product-font: normal 16px/24px $font-family;
+$product-name-color: $base-body-color;
+$product-name-hover-color: $primary-text-color;
+
+// ------- Product price -------
+
+$price-font: bold 18px/28px $font-custom;
+$price-color: $dark-text-color;
+$product-price-color: $dark-text-color;
+$product-special-price-color: $primary-text-color;
+$product-old-price-color: $color-gray-darken;
+
+@mixin price-large {
+  font: $font-heading;
+  color: $price-color;
+  font-weight: 700;
+}
+
+// ------- Image vars -------
+
+@mixin product-image {
+  display: block;
+  position: relative;
+  background: $product-background;
+}
+
+@mixin products-block-image {
+  display: block;
+  background: $product-background;
+}
+
+@mixin post-category-image {
+  @include product-image;
+  float: left;
+  margin: 0 20px 10px 0;
+}
+
+@mixin post-image {
+  display: block;
+  margin-bottom: 20px;
+  @media (min-width: $screen-md-min) {
+    margin-bottom: 40px;
+  }
+}
+
+// ------- Color picker list -------
+
+@mixin color-pick-list {
+  list-style-type: none;
+  margin: 0;
+  line-height: 1;
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 0 2px;
+    @include border-radius(50%);
+    clear: none;
+    width: auto;
+    float: none;
+    position: relative;
+    > a, > input {
+      display: block;
+      height: 26px;
+      width: 26px;
+      cursor: pointer;
+      margin: 0;
+      @include border-radius(50%);
+      position: relative;
+      border: 2px solid $color-light;
+      @include transition(0.3s all ease);
+      outline: none;
+      &.on {
+        @include box-shadow(0 0 0 2px $color-primary);
+        + label, + input + label {
+          span {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+        @include box-shadow(0 0 0 2px $color-primary);
+      }
+    }
+    label {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      text-align: center;
+      cursor: pointer;
+      @include transform (translate(-50%, -50%));
+      a {
+        line-height: 22px;
+        display: block;
+        @include border-radius($border-radius-base);
+        span {
+          display: none;
+        }
+      }
+      strong {
+        display: none;
+      }
+    }
+    &.selected {
+      a {
+        @include box-shadow(0 0 0 2px $color-primary);
+      }
+    }
+    & + li {
+      margin-left: 10px;
+    }
+  }
+}

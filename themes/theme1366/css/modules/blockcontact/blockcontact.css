@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.shop-phone {
+  float: left;
+  padding: 5px 0 10px; }
+  @media (max-width: 767px) {
+    .shop-phone {
+      display: none; } }
+  .shop-phone i {
+    font-size: 21px;
+    line-height: 21px;
+    color: #767676;
+    padding-right: 7px; }
+  .shop-phone strong {
+    color: #767676; }
+  .shop-phone a:hover {
+    color: #767676; }
+
+#contact-link {
+  float: right; }
+  #contact-link a {
+    position: relative;
+    display: block;
+    font: 700 14px/22px "Lato", sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #767676;
+    cursor: pointer;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border-left: none; }
+    @media (min-width: 1200px) and (max-width: 1649px) {
+      #contact-link a {
+        font-size: 12px; } }
+    #contact-link a:hover, #contact-link a.active {
+      background: #202022; }
+
+@media (max-width: 767px) {
+  #contact_block {
+    margin-bottom: 20px; } }
+#contact_block .label {
+  display: none; }
+#contact_block .block_content {
+  color: #888888; }
+#contact_block p {
+  margin-bottom: 4px; }
+#contact_block p.tel {
+  font: 400 17px/21px "Lato", sans-serif;
+  color: #767676;
+  margin-bottom: 6px; }
+  #contact_block p.tel i {
+    font-size: 25px;
+    vertical-align: -2px;
+    padding-right: 10px; }
+
+/*# sourceMappingURL=blockcontact.css.map */

@@ -1,0 +1,108 @@
+@import "../../_theme_variables";
+
+.homefeatured-heading {
+  font: $font-heading;
+  color: $base-heading-color;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 35px;
+  @media (min-width: $screen-xs-min) {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: $screen-lg-min) {
+    margin-top: 112px;
+  }
+}
+
+#homefeatured {
+  margin-top: 0;
+  margin-bottom: 0;
+  > li {
+    @media (min-width: 1650px) {
+      width: 16.66%;
+      clear: none;
+      &:nth-child(6n+1) {
+        clear: left;
+      }
+    }
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+      margin-bottom: 8px;
+    }
+    @media (max-width: $screen-xs-min - 1) {
+      margin-bottom: 20px;
+    }
+  }
+  @media (min-width: $screen-md-min) and (max-width: 1649px) {
+    //max-width: 1200px;
+    //margin-left: auto;
+    //margin-right: auto;
+    > li {
+      width: calc(100% / 6);
+      clear: none;
+      min-height: 435px;
+      &:nth-child(3n+1) {
+        //clear: left;
+      }
+    }
+  }
+}
+
+div:not(.bx-viewport) {
+  > #homefeatured {
+    > li {
+      @media (max-width: $screen-xs-min - 1) {
+        width: 100%;
+        .product-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          position: relative;
+          @include clearfix;
+          padding-bottom: 55px;
+          .left-block {
+            float: left;
+            width: 38%;
+            .new-box, .sale-box {
+              display: none;
+            }
+          }
+          .right-block {
+            position: static;
+            float: left;
+            width: 62%;
+            text-align: left;
+            padding: 15px 0 15px 15px;
+            a.product-name {
+              font-size: 20px;
+            }
+            .functional-buttons {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              text-align: center;
+              > div a {
+                color: #5e646c;
+                &:hover {
+                  color: $primary-text-color;
+                }
+              }
+              .ajax_add_to_cart_button {
+                color: $primary-text-color;
+                &:hover {
+                  color: $dark-text-color;
+                }
+              }
+            }
+            .price-percent-reduction {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+@import "../../../_theme_variables";
+@import "_elements_variables";
+
+.blog-image {
+  margin-bottom: 15px;
+  a {
+    display: block;
+    img {
+      @media only screen and (max-width: $screen-xs-max) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#homepage-blog {
+  margin-top: 50px;
+  margin-bottom: 0;
+  @media (min-width: $screen-lg-min) {
+    margin-top: 112px;
+  }
+  .title_block {
+    margin-bottom: 17px;
+    &:after {
+      display: none;
+    }
+    padding-right: 0;
+    a {
+      &:hover {
+        color: $primary-text-color;
+      }
+    }
+  }
+  .blog-descr {
+    text-align: center;
+    color: lighten($color-base, 15.29%);
+  }
+  .blog-image {
+    display: none;
+  }
+  .date-added {
+    font-size: 13px;
+    color: $color-gray-darken;
+    margin-bottom: 5px;
+    .day-added {
+      display: block;
+      font-family: $font-custom;
+      font-size: 70px;
+      font-weight: 300;
+      color: $dark-text-color;
+      line-height: 1.02;
+    }
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 20px;
+      padding-left: 3px;
+      .day-added {
+        margin-left: -3px;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-bottom: 33px;
+    }
+  }
+  .post-descr {
+    margin-left: 3px;
+  }
+  .link {
+    color: $primary-text-color;
+    margin-left: 3px;
+    margin-top: 5px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 15px;
+    }
+    @media (min-width: 1360px) {
+      margin-top: 29px;
+    }
+    &:hover {
+      color: $dark-text-color;
+    }
+  }
+  .block_content {
+    margin-top: 10px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 30px;
+    }
+    @media (min-width: $screen-lg-min) {
+      margin-top: 68px;
+    }
+    h5 {
+      position: relative;
+      font: $font-subheading;
+      text-transform: uppercase;
+      margin: 0 0 15px;
+      padding-bottom: 7px;
+      font-size: 20px;
+      line-height: 1.2;
+      @media (min-width: $screen-sm-min) {
+        font-size: 16px;
+        margin: 0 0 23px 3px;
+        padding-bottom: 19px;
+      }
+      @media (min-width: $screen-md-min) {
+        font-size: 18px;
+      }
+      @media (min-width: 1650px) {
+        font-size: 20px;
+        line-height: (8 / 5);
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100px;
+        border-bottom: 2px solid $secondary-border-color;
+        @media (max-width: $screen-xs-max) {
+          left: 50%;
+          margin-left: -50px;
+        }
+      }
+      a {
+        color: $dark-text-color;
+        &:hover {
+          color: $primary-text-color;
+        }
+      }
+    }
+    > ul {
+      @media (min-width: $screen-sm-min) {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
+      > li {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        @media (max-width: $screen-xs-max) {
+          text-align: center;
+        }
+        @media (min-width: $screen-sm-min) {
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            border-right: 2px solid #f4f2ec;
+          }
+        }
+        @media (min-width: $screen-md-min) {
+          padding-right: 5%;
+          &:before {
+            right: 7%;
+          }
+        }
+        @media (min-width: $screen-lg-min) {
+          padding-top: 36px;
+          padding-bottom: 42px;
+        }
+        @media (min-width: 1650px) {
+          padding-right: 7%;
+          &:before {
+            right: 11.5%;
+          }
+        }
+        &:last-child {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  li {
+    @media (min-width: $screen-md) { // min 991px
+      &.first-in-line {
+        clear: left;
+      }
+    }
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) { // min 480px max 991px
+      &.first-item-of-tablet-line {
+        clear: left;
+      }
+    }
+    @media only screen and (max-width: $screen-xs-max) {
+      &.first-item-of-mobile-line {
+        clear: left;
+      }
+    }
+  }
+}

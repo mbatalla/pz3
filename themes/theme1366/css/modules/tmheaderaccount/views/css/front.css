@@ -1,0 +1,59 @@
+#header-login {
+  position: relative;
+  float: right; }
+  #header-login .header_user_info {
+    border-left: 1px solid #0b1c32;
+    border-right: 1px solid #0b1c32;
+    padding: 10px 15px;
+    position: relative;
+    display: block;
+    color: white;
+    font-weight: bold;
+    cursor: pointer; }
+    #header-login .header_user_info.current a {
+      color: white; }
+      #header-login .header_user_info.current a:after {
+        font-family: "FontAwesome";
+        content: "\f0d7";
+        display: inline-block;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #7587a1;
+        padding-left: 12px;
+        font-weight: normal; }
+    #header-login .header_user_info.current:hover, #header-login .header_user_info.current:focus, #header-login .header_user_info.current.active {
+      background: #0b1c32; }
+    #header-login .header_user_info.current.active a:after {
+      content: "\f0d8"; }
+  #header-login .logout {
+    overflow: hidden;
+    padding-top: 10px;
+    margin: 0; }
+
+#header-login-content {
+  display: none;
+  width: 170px;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 2;
+  overflow: hidden;
+  background: #0b1c32;
+  border-radius: 5px;
+  color: #7587a1;
+  width: 270px; }
+  #header-login-content li {
+    padding: 5px; }
+  #header-login-content .alert li {
+    padding: 0; }
+  #header-login-content label {
+    color: white; }
+  #header-login-content a:not(.btn):hover, #header-login-content a:focus:not(.btn) {
+    color: white; }
+  #header-login-content li ul li a i {
+    display: none; }
+
+#create_header_account_error {
+  padding: 8px; }

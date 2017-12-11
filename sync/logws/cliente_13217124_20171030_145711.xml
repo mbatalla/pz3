@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <soapenv:Envelope xmlns="urn:schemas-qad-com:xml-services" xmlns:qcom="urn:schemas-qad-com:xml-services:common" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <soapenv:Header>
+        <wsa:Action />
+        <wsa:To>urn:services-qad-com:QADERP</wsa:To>
+        <wsa:MessageID>urn:services-qad-com::QADERP</wsa:MessageID>
+        <wsa:ReferenceParameters>
+        <qcom:suppressResponseDetail>false</qcom:suppressResponseDetail>
+        </wsa:ReferenceParameters>
+        <wsa:ReplyTo>
+        <wsa:Address>urn:services-qad-com:</wsa:Address>
+        </wsa:ReplyTo>
+        </soapenv:Header>
+        <soapenv:Body>
+        <maintainCustomer>
+        <qcom:dsSessionContext>
+        <qcom:ttContext>
+        <qcom:propertyQualifier>QAD</qcom:propertyQualifier>
+        <qcom:propertyName>domain</qcom:propertyName>
+        <qcom:propertyValue>1000</qcom:propertyValue>
+        </qcom:ttContext>
+        <qcom:ttContext>
+        <qcom:propertyQualifier>QAD</qcom:propertyQualifier>
+        <qcom:propertyName>version</qcom:propertyName>
+        <qcom:propertyValue>eB2_2</qcom:propertyValue>
+        </qcom:ttContext>
+        <qcom:ttContext>
+        <qcom:propertyQualifier>QAD</qcom:propertyQualifier>
+        <qcom:propertyName>mnemonicsRaw</qcom:propertyName>
+        <qcom:propertyValue>false</qcom:propertyValue>
+        </qcom:ttContext>
+        <qcom:ttContext>
+        <qcom:propertyQualifier>QAD</qcom:propertyQualifier>
+        <qcom:propertyName>scopeTransaction</qcom:propertyName>
+        <qcom:propertyValue>true</qcom:propertyValue>
+        </qcom:ttContext>
+        </qcom:dsSessionContext>
+        <dsCustomer>
+        <customer>
+        <cmAddr>13217124</cmAddr>
+        <adName>ANA MARIA</adName>
+        <adLine1>VALDIVIA</adLine1>
+        <adLine2>CAMINO A CHIU CHIU 480 PUERTO SECO</adLine2>
+        <adLine3></adLine3>
+        <adCity>Web</adCity> 
+        <adState>II</adState>
+        <adCtry>CL</adCtry>     
+        <adCounty>CALAMA</adCounty>
+        <adPhone>+56 9 8253 3307</adPhone>        
+        <adPhone2></adPhone2>
+        <cmShipvia>BLUE EXPRESS</cmShipvia>
+        <cmArAcct>104030</cmArAcct>
+        <cmType>MINO</cmType>
+        <cmCurr>CLP</cmCurr>
+        <cmSite>101</cmSite>
+        <cmLang>LS</cmLang>
+        <cmClass>NORMAL</cmClass>
+        <adTaxable>true</adTaxable>
+        <adTaxZone>CHILE</adTaxZone>
+        <adTaxc>IVA</adTaxc>
+        <adTaxIn>FALSE</adTaxIn>
+        <adPstId>CL13217124-6</adPstId>
+        <cmCrTerms>CONTADO</cmCrTerms>
+        </customer>
+        </dsCustomer>
+        </maintainCustomer>
+        </soapenv:Body>
+        </soapenv:Envelope>

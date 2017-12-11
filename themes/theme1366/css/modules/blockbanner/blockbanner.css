@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+#header .banner a {
+  display: block;
+  max-width: 1170px;
+  max-height: 65px; }
+  #header .banner a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 65px;
+    max-width: 1170px; }
+
+/*# sourceMappingURL=blockbanner.css.map */

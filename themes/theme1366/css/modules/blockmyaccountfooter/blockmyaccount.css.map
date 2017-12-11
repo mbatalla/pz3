@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAMC;EALA,WAAW,EAAE,uBAAuB;EACjC,GAAG,EAAE,kKAC+E;EACpF,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM",
+"sources": ["../../../sass/born-ready/born-ready.scss"],
+"names": [],
+"file": "blockmyaccount.css"
+}

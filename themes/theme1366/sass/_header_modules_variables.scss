@@ -1,0 +1,127 @@
+@import 'compass';
+@import 'bootstrap_lib/_variables';
+
+// ------- COLORS -------
+
+$hm-text-color: $base-text-color;
+$hm-text-color-secondary: #5e646c;
+$hm-darken-bg: darken($color-dark, 5%);
+$hm-lighten-bg: $light-background;
+
+// ------- Header Modules Indents --------
+
+@mixin hm-indent {
+  position: relative;
+  display: block;
+  font: 700 14px/22px $font-family;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $hm-text-color;
+  cursor: pointer;
+  @include transition(0.3s all ease);
+  @media (min-width: $screen-lg-min) and (max-width: 1649px) {
+    font-size: 12px;
+  }
+}
+
+// ------- Header Modules Icons -------
+
+@mixin hm-icon {
+  @include addIcon('\f107');
+  font-size: 14px;
+  line-height: 18px;
+  padding-left: 1px;
+  font-weight: normal;
+  @include transition(0.3s all ease);
+}
+
+@mixin hm-icon-hover {
+  @include rotate(-180deg);
+}
+
+// ------- Header Modules Drop Down Box -------
+
+@mixin hm-drop-down-box {
+  display: none;
+  width: 230px;
+  padding: 24px 28px;
+  margin-top: 15px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 2;
+  overflow: hidden;
+  background: $hm-lighten-bg;
+  border-radius: $border-radius-base;
+  color: $hm-text-color-secondary;
+  font-size: 15px;
+  line-height: 1.6;
+  @include box-shadow(0px 15px 62px 0px rgba(0, 0, 0, 0.07));
+  li + li {
+    margin-top: 12px;
+  }
+  @media (min-width: $screen-lg-min) and (max-width: 1359px) {
+    font-size: 13px;
+  }
+  @media (min-width: 1360px) {
+    width: 270px;
+    padding: 34px 39px 30px;
+    margin-top: 23px;
+    li + li {
+      margin-top: 21px;
+    }
+  }
+}
+
+// ------- SEARCH bLOCK IN HEADER AND BLOG SEARCH IN LEFT COLUMN -------
+
+@mixin search-box-style {
+  #tmsearchbox, #searchbox {
+    float: left;
+    width: 100%;
+    border: none;
+    position: relative;
+    background: $base-box-bg;
+    @include box-shadow(inset 0 0 0 1px $base-border-color);
+    border-radius: $border-radius-base;
+    .btn.button-search {
+      background: $dark-background;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: none;
+      color: white;
+      width: 50px;
+      text-align: center;
+      height: 100%;
+      border-radius: 0;
+      span {
+        display: none;
+      }
+      &:before {
+        @include addIcon('\f002');
+        font-size: 25px;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        bottom: auto;
+        opacity: 1;
+        background: none;
+        @include transform (translate(0, -50%));
+      }
+      &:hover {
+        background: $primary-background;
+      }
+    }
+    #tm_search_query, #search_query_top {
+      display: block;
+      padding: 12px 0 13px 13px;
+      height: 45px;
+      border: none;
+      background: none;
+      border-right: 60px solid rgba($light-border-color, 0);
+    }
+  }
+}

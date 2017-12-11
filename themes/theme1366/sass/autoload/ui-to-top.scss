@@ -1,0 +1,50 @@
+@import "../_theme_variables";
+
+.ui-to-top {
+  font-size: 50px;
+  line-height: 1;
+  color: $dark-text-color;
+  background: none;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  z-index: 999;
+  @include translate(0, 100px);
+  &:before {
+    line-height: 1;
+  }
+
+  &:hover {
+    color: $primary-text-color;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $dark-text-color;
+    @include translate(0, 0);
+    &:hover {
+      color: $primary-text-color;
+    }
+  }
+}
+
+.mobile .ui-to-top,
+.tablet .ui-to-top {
+  display: none !important;
+}
+
+@media (min-width: $screen-xs-min) {
+  .ui-to-top {
+    right: 40px;
+    bottom: 40px;
+  }
+}
+
+.content_only {
+  .ui-to-top {
+    display: none !important;
+  }
+}

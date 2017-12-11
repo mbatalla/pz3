@@ -1,0 +1,70 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.category-block ul.product_list.grid > li.first-in-line, .category-block ul.product_list.grid > li.first-item-of-mobile-line, .category-block ul.product_list.grid > li.first-item-of-tablet-line {
+  clear: none !important; }
+
+.category-block {
+  margin-top: 15px;
+  margin-bottom: 0; }
+  @media (min-width: 480px) {
+    .category-block {
+      margin-top: 50px; } }
+  @media (min-width: 1200px) {
+    .category-block {
+      margin-top: 112px; } }
+  .category-block h4 {
+    position: relative;
+    font: 300 26px/32px "Lato", sans-serif;
+    color: #2c2c2f;
+    text-align: center;
+    padding-bottom: 12px;
+    margin-bottom: 26px;
+    padding-right: 0; }
+    @media (min-width: 1200px) {
+      .category-block h4 {
+        margin-bottom: 50px; } }
+    .category-block h4:after {
+      display: none; }
+    .category-block h4:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100px;
+      margin-left: -50px;
+      border-bottom: 2px solid #2a6db2; }
+  @media (min-width: 992px) {
+    .category-block ul.product_list.grid > li .product-container .right-block {
+      padding-top: 34px; } }
+  .category-block .bx-viewport > ul {
+    margin: 0; }
+    .category-block .bx-viewport > ul > li {
+      padding-left: 0;
+      padding-right: 0; }
+  .category-block .bx-wrapper .bx-controls-direction a {
+    height: 50px;
+    width: 50px;
+    color: #2c2c2f;
+    text-align: center; }
+    .category-block .bx-wrapper .bx-controls-direction a:before {
+      font-family: "FontAwesome";
+      content: "";
+      display: inline-block;
+      font-weight: normal;
+      font-size: 37px;
+      line-height: 50px;
+      color: inherit; }
+    .category-block .bx-wrapper .bx-controls-direction a.bx-prev {
+      left: 0; }
+      .category-block .bx-wrapper .bx-controls-direction a.bx-prev:before {
+        content: '\f104'; }
+    .category-block .bx-wrapper .bx-controls-direction a.bx-next {
+      right: 0; }
+    .category-block .bx-wrapper .bx-controls-direction a:hover {
+      color: #009fe3; }
+
+/*# sourceMappingURL=tmcategoryproducts.css.map */

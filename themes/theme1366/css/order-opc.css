@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*
+* @subsection One-Page Checkout Styles
+*/
+#order-opc {
+  line-height: 20px; }
+  #order-opc .box {
+    padding-bottom: 20px; }
+  #order-opc .cart_navigation {
+    margin-bottom: 53px; }
+  #order-opc .page-heading.step-num {
+    position: relative;
+    padding-left: 45px;
+    overflow: visible; }
+    #order-opc .page-heading.step-num span {
+      font: 300 50px/60px "Lato", sans-serif;
+      color: #2c2c2f;
+      position: absolute;
+      left: 0;
+      top: 0; }
+  #order-opc .form-group {
+    margin-bottom: 15px; }
+    #order-opc .form-group .form-control#adress_alias {
+      margin-bottom: 20px; }
+    @media (min-width: 1200px) {
+      #order-opc .form-group.phone-number {
+        float: left;
+        width: 280px;
+        margin-right: 13px; } }
+    @media (min-width: 1200px) {
+      #order-opc .form-group.phone-number + p {
+        padding: 23px 0 0 0;
+        margin-bottom: 0; } }
+  #order-opc .lost_password {
+    display: inline-block;
+    text-decoration: underline;
+    margin: 5px 0 14px; }
+    #order-opc .lost_password:hover {
+      text-decoration: none; }
+  #order-opc .opc-button {
+    padding: 11px 0 0 0; }
+  #order-opc ul.bullet {
+    line-height: 22px;
+    margin-bottom: 5px; }
+  #order-opc .date-select {
+    padding-bottom: 10px; }
+  #order-opc .opc-add-save {
+    border-top: 1px solid #ebebeb;
+    margin-top: 20px;
+    padding-top: 20px; }
+  #order-opc #message {
+    margin-bottom: 35px; }
+  #order-opc #opc_payment_methods {
+    margin-bottom: 30px; }
+    #order-opc #opc_payment_methods p.warning {
+      color: #fe5b66;
+      font-weight: bold; }
+  #order-opc #opc_account {
+    margin-bottom: 30px; }
+  #order-opc .address_delivery.select {
+    margin-bottom: 15px; }
+  #order-opc #address_invoice_form.form-group {
+    margin-bottom: 30px; }
+
+#new_account_form .id_state,
+#new_account_form .dni,
+#new_account_form .postcode {
+  display: none; }
+
+#opc_new_account .form-group .form-control {
+  max-width: 280px; }
+#opc_new_account div.selector {
+  width: 260px !important; }
+  @media (min-width: 480px) {
+    #opc_new_account div.selector {
+      width: 280px !important; } }
+
+/*# sourceMappingURL=order-opc.css.map */

@@ -1,0 +1,219 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.tmhomepagecategorygallery-block {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  clear: both; }
+  .tmhomepagecategorygallery-block #tmhomepagecategorygallery {
+    margin: 0; }
+    .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li {
+      position: relative;
+      z-index: 1;
+      background: #FFFFFF;
+      height: auto;
+      padding-bottom: 31.25%; }
+      @media (min-width: 480px) and (max-width: 767px) {
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li {
+          height: 240px;
+          padding-bottom: 0; } }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:before {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        background: #FFFFFF;
+        z-index: 1; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:after {
+        display: block;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        content: '';
+        width: 0;
+        height: 0;
+        margin-top: -8px;
+        border-style: solid;
+        border-width: 8.5px 9px 8.5px 0;
+        border-color: transparent #FFFFFF transparent transparent;
+        z-index: 1; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 50%; }
+        @media (min-width: 768px) {
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a:after {
+            font-family: 'Material Icons';
+            content: "";
+            display: inline-block;
+            font-weight: normal;
+            font-size: 40px;
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color: #FFFFFF;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            transition-delay: 0.1s;
+            z-index: 1;
+            opacity: 0; }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba(44, 44, 47, 0.4);
+            -moz-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            opacity: 0;
+            z-index: 1; }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a:hover:after {
+            left: 50%;
+            opacity: 1; }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a:hover:before {
+            opacity: 1; } }
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li > a img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: auto;
+          max-width: none; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content {
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        padding: 30px 4%;
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        z-index: 2; }
+        @media (min-width: 1370px) {
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content {
+            padding-left: 6%;
+            padding-right: 6%; } }
+        @media (min-width: 1650px) {
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content {
+            padding-left: 11.4%;
+            padding-right: 11.4%; } }
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-html {
+          margin-bottom: 12px; }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-html p {
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: #2c2c2f;
+            text-transform: uppercase;
+            margin: 0; }
+            @media (min-width: 1200px) {
+              .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-html p {
+                font-size: 16px;
+                letter-spacing: 0.38em; } }
+          @media (max-width: 479px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-html {
+              display: none; } }
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-name {
+          position: relative;
+          margin: 0;
+          font: 300 26px/32px "Lato", sans-serif;
+          color: #2c2c2f;
+          padding-bottom: 27px; }
+          @media (max-width: 1199px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-name {
+              font-size: 22px;
+              padding-bottom: 10px; } }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-name:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100px;
+            border-bottom: 2px solid #eae6da; }
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-description {
+          font-size: 14px;
+          line-height: 1.66667;
+          margin: 14px 0 0; }
+          @media (min-width: 1200px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-description {
+              font-size: 18px;
+              margin-top: 20px; } }
+          @media (max-width: 991px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-description {
+              display: none; } }
+        .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-button {
+          margin-top: 25px; }
+          @media (min-width: 1200px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-button {
+              min-width: 195px;
+              margin-top: 40px; } }
+          @media (max-width: 1199px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-button {
+              padding-top: 12px;
+              padding-bottom: 12px; } }
+          @media (max-width: 479px) {
+            .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li .tmhomepagecategorygallery-content .tmhomepagecategorygallery-button {
+              display: none; } }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(4n + 3):before {
+        background: #f7f7f7; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(4n + 3):after {
+        border-color: transparent #f7f7f7 transparent transparent; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even):before {
+        left: 0;
+        right: 50%;
+        background: #FFFFFF; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even):after {
+        right: auto;
+        left: 50%;
+        border-width: 8.5px 0 8.5px 9px;
+        border-color: transparent transparent transparent #FFFFFF; }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even) > a {
+        left: 50%;
+        right: 0; }
+        @media (min-width: 768px) {
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even) > a:after {
+            content: '\e5c8';
+            left: 0; }
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even) > a:hover:after {
+            left: 50%; } }
+        @media (min-width: 480px) and (max-width: 767px) {
+          .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even) > a img {
+            -moz-transform: translate(15%, 0);
+            -ms-transform: translate(15%, 0);
+            -webkit-transform: translate(15%, 0);
+            transform: translate(15%, 0); } }
+      .tmhomepagecategorygallery-block #tmhomepagecategorygallery > li:nth-child(even) .tmhomepagecategorygallery-content {
+        left: 0;
+        right: 50%; }
+  .tmhomepagecategorygallery-block #tmhomepagecategorygallery-nav {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 15px; }
+    .tmhomepagecategorygallery-block #tmhomepagecategorygallery-nav > li.current-item > a, .tmhomepagecategorygallery-block #tmhomepagecategorygallery-nav #tmhomepagecategorygallery-nav > li > a:hover {
+      color: #f00; }
+
+/*# sourceMappingURL=tmhomepagecategorygallery.css.map */

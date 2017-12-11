@@ -1,0 +1,236 @@
+@import "../../../../_theme_variables";
+
+.tmhomepagecategorygallery-block {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  clear: both;
+
+  #tmhomepagecategorygallery {
+    margin: 0;
+    > li {
+      position: relative;
+      z-index: 1;
+      background: $product-background;
+      height: auto;
+      padding-bottom: 31.25%;
+      @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+        height: 240px;
+        padding-bottom: 0;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        background: $light-background;
+        z-index: 1;
+      }
+      &:after {
+        display: block;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        content: '';
+        width: 0;
+        height: 0;
+        margin-top: -8px;
+        border-style: solid;
+        border-width: 8.5px 9px 8.5px 0;
+        border-color: transparent $light-background transparent transparent;
+        z-index: 1;
+      }
+      > a {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 50%;
+        @media (min-width: $screen-sm-min) {
+          &:after {
+            @include addMaterialIcon('\e5c4', 40px);
+            position: absolute;
+            left: 100%;;
+            top: 50%;
+            @include translate(-50%, -50%);
+            color: $light-text-color;
+            @include transition(0.3s all ease);
+            transition-delay: 0.1s;
+            z-index: 1;
+            opacity: 0;
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: rgba($dark-background, 0.4);
+            @include transition(0.4s all ease);
+            opacity: 0;
+            z-index: 1;
+          }
+          &:hover {
+            &:after {
+              left: 50%;
+              opacity: 1;
+            }
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: auto;
+          max-width: none;
+        }
+      }
+      .tmhomepagecategorygallery-content {
+        position: absolute;
+        left: 50%;
+        right: 0;
+        top: 50%;
+        padding: 30px 4%;
+        @include translate(0, -50%);
+        z-index: 2;
+        @media (min-width: 1370px) {
+          padding-left: 6%;
+          padding-right: 6%;
+        }
+        @media (min-width: 1650px) {
+          padding-left: 11.4%;
+          padding-right: 11.4%;
+        }
+        .tmhomepagecategorygallery-html {
+          margin-bottom: 12px;
+          p {
+            font-size: 12px;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: $dark-text-color;
+            text-transform: uppercase;
+            margin: 0;
+            @media (min-width: $screen-lg-min) {
+              font-size: 16px;
+              letter-spacing: 0.38em;
+            }
+          }
+          @media (max-width: $screen-xs-min - 1) {
+            display: none;
+          }
+        }
+        .tmhomepagecategorygallery-name {
+          position: relative;
+          margin: 0;
+          font: $font-heading;
+          color: $dark-text-color;
+          padding-bottom: 27px;
+          @media (max-width: $screen-md-max) {
+            font-size: 22px;
+            padding-bottom: 10px;
+          }
+          &:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: '';
+            width: 100px;
+            border-bottom: 2px solid $secondary-border-color;
+          }
+        }
+        .tmhomepagecategorygallery-description {
+          font-size: 14px;
+          line-height: (5 / 3);
+          margin: 14px 0 0;
+          @media (min-width: $screen-lg-min) {
+            font-size: 18px;
+            margin-top: 20px;
+          }
+          @media (max-width: $screen-sm-max) {
+            display: none;
+          }
+        }
+        .tmhomepagecategorygallery-button {
+          margin-top: 25px;
+          @media (min-width: $screen-lg-min) {
+            min-width: 195px;
+            margin-top: 40px;
+          }
+          @media (max-width: $screen-md-max) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+          @media (max-width: $screen-xs-min - 1) {
+            display: none;
+          }
+        }
+      }
+      &:nth-child(4n + 3) {
+        &:before {
+          background: darken($product-background, 3%);
+        }
+        &:after {
+          border-color: transparent darken($product-background, 3%) transparent transparent;
+        }
+      }
+      &:nth-child(even) {
+        &:before {
+          left: 0;
+          right: 50%;
+          background: $product-background;
+        }
+        &:after {
+          right: auto;
+          left: 50%;
+          border-width: 8.5px 0 8.5px 9px;
+          border-color: transparent transparent transparent $product-background;
+        }
+        > a {
+          left: 50%;
+          right: 0;
+          @media (min-width: $screen-sm-min) {
+            &:after {
+              content: '\e5c8';
+              left: 0;
+            }
+            &:hover {
+              &:after {
+                left: 50%;
+              }
+            }
+          }
+          img {
+            @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+              @include translate(15%, 0);
+            }
+          }
+        }
+        .tmhomepagecategorygallery-content {
+          left: 0;
+          right: 50%;
+        }
+      }
+    }
+  }
+
+  #tmhomepagecategorygallery-nav {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 15px;
+    > li.current-item > a, #tmhomepagecategorygallery-nav > li > a:hover {
+      color: #f00;
+    }
+  }
+}

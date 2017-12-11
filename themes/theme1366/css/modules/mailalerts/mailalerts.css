@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+#mailalerts_block_account li.last_item {
+  border-bottom: none;
+  margin-bottom: 0; }
+#mailalerts_block_account li .products-block-image {
+  float: left;
+  margin-right: 19px; }
+#mailalerts_block_account li .remove {
+  float: right; }
+  #mailalerts_block_account li .remove i {
+    cursor: pointer; }
+
+/*# sourceMappingURL=mailalerts.css.map */

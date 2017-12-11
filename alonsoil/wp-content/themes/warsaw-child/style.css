@@ -1,0 +1,363 @@
+/*
+Theme Name: warsaw Child
+Author: TonaTheme
+Version: 1.0.0
+Author URI: http://themeforest.net/user/tonatheme
+Theme URI: http://asianitbd.com/wp/warsaw
+Description: This is Warsaw Oganic Health WordPress theme
+License: ''
+License URI: ''
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, rtl-language-support, sticky-post, translation-ready, microformats
+Text Domain: warsaw
+Template: warsaw
+*/
+
+body {
+
+    color: #fff;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+.sec-title-one h2 {
+    font-family: 'Vollkorn', serif;
+    text-transform: uppercase;
+}
+
+.woocommerce div.product .product_title {
+    color: #b5b22e !important;
+}
+
+.page-id-121 h2 {
+    color: white !important;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%
+}
+
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.intro-section .inner-part .content-box .inner-box:before,
+.intro-section .inner-part .content-box .inner-box:after {
+    background: none;
+}
+
+.btn-style-two,
+.btn-style-four {
+    background: #b5b22e;
+    border-color: #b5b22e;
+    color: #fff;
+}
+
+.btn-style-four:hover {
+    background: #b5b22e;
+}
+
+.intro-section .inner-part .content-column h3 {
+    color: #b5b22e;
+}
+
+.intro-section,
+.sec-title-one:after {
+
+}
+
+form.cart button.add-to-cart {
+    background: #b5b22e !important;
+    border-color: #b5b22e !important;
+}
+
+.hermes.tparrows {
+    display: none;
+}
+
+.sec-title-one:before {
+    background: none;
+}
+
+.main-menu .navigation>li:hover>a,
+.main-menu .navigation>li.current>a,
+.main-menu .navigation>li.current-menu-item>a,
+.default-food-item .lower-content .price {
+    color: #b5b22e;
+}
+
+.default-food-item .inner-box:hover {
+    border-color: #b5b22e !important;
+}
+
+.filters.text-center {
+    display: none;
+}
+
+.fluid-section-two:before {
+    background: rgba(187, 196, 30, 0.94);
+}
+
+.intro-section .inner-part .content-box {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.intro-section:before {
+    background: rgba(244, 238, 222, 0.2);
+}
+
+ul.list-inline li {
+    font-weight: bold;
+    color: #b5b22e;
+    text-transform: uppercase;
+}
+
+.main-footer {
+    background: #fff;
+}
+
+.default-shop-item .lower-content h3 a {
+    color: #b5b22e;
+}
+
+.default-shop-item .inner-box .add-cart-btn:hover,
+.default-shop-item .inner-box .prod-options .option-btn:hover,
+.default-shop-item .inner-box .prod-options .option-btn:hover {
+    background: #b5b22e;
+}
+
+fluid-section-one .oval-cut {
+    position: absolute;
+    left: 0;
+    top: -14px;
+    width: 100%;
+    height: 64px;
+    background: url(images/background/curve-one.png) center top no-repeat;
+    z-index: 2;
+}
+
+.fluid-section-one .left-column,
+.fluid-section-one .right-column {
+    min-height: 530px;
+}
+
+.fluid-section-one .left-column:before {
+    background: #b5b22e;
+}
+
+.fluid-section-one .right-column:before {
+    background: #d7d57d;
+}
+
+.fluid-section-one h2 {
+    
+}
+
+.default-team-member .content-column .inner {
+    position: relative;
+    padding: 0px 50px;
+    margin-top: -15px;
+}
+
+.lower-content ul li,
+.comment .text ul li,
+.blog-classic-view ul li,
+.blog-classic-view ul li {
+    list-style-type: none !important;
+}
+
+.default-team-member h3 {
+    color: #b5b22e !important;
+}
+
+.default-team-member h3 span {
+
+}
+
+.news-style-one .lower-content h3 a {
+    color: #b5b22e !important;
+    font-size: 40px;
+}
+
+.sidebar-title h3 {
+    color: #b5b22e !important;
+}
+
+.news-style-one .lower-content .more-link a {
+    color: #d7d57d;
+}
+
+.intro-section .text {
+    color: #000 !important;
+}
+
+.default-food-item .lower-content h3 a {
+
+}
+
+.default-food-item .lower-content h3 a:hover {
+    color: #b5b22e;
+}
+
+.prod h2,
+.contact h2 {
+    color: #b5b22e;
+}
+
+.footer-style-one .column h2:after,
+.textwidget h3:after {
+    border-bottom: 1px solid #b5b22e;
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 30px;
+}
+
+.textwidget h3 {
+    margin-bottom: 7px;
+    margin-top: 23px;
+    padding-bottom: 12px;
+}
+
+.info {
+    margin-top: -21px;
+}
+
+.page-id-193 div.text {
+    color: #000;
+}
+
+.subscribe-section:before {
+    background: #b5b22e;
+}
+
+.cart-collaterals, .details-header, .info-column p, .input-text.qty.text {
+    color: #000;
+}
+
+.main-header .nav-toggler button {
+    position: relative;
+    display: block;
+    height: 36px;
+    width: 42px;
+    background: #b5b22e;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 34px;
+    border: 1px solid #b5b22e;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+.hidden-bar {
+    position: fixed;
+    top: 0;
+    width: 305px;
+    height: 100%;
+    background: #b5b22e;
+    z-index: 9999;
+    transition: all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    -ms-transition: all 700ms ease;
+    -o-transition: all 700ms ease;
+    -moz-transition: all 700ms ease;
+}
+
+.hidden-bar .logo {
+    padding: 30px 0px;
+    background: #b5b22e;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .page-id-655 ul {
+        padding-left: 0px !important; 
+    }
+
+}
+
+.intro-section {
+    background: none;
+}
+
+.container p {
+    color: black;
+}
+
+.container h2 {
+    color: white !important;
+}
+
+.fluid-section-one {
+    background: none;
+}
+
+.sec-title-one h2 {
+    color: #b5b22e !important;
+}
+
+.outer-box .sec-title-one h2 {
+    color: white !important;
+}
+
+.info-widget {
+    margin-top: -70px;
+}
+
+.textwidget {
+    margin-top: -70px;
+}
+
+.intro-section .inner-part {
+    margin-bottom: -180px;
+    padding-bottom: 0px;
+}
+
+.wpcf7-form .btn-style-one {
+    position: relative;
+    padding: 8px 30px;
+    line-height: 24px;
+    text-transform: capitalize;
+    background: #b5b22e;
+    color: #ffffff;
+    border: 2px solid #b5b22e;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 22px;
+}
+
+.variations .label {
+    color: black;
+    font-size: 18px;
+}
+
+.variations select {
+    background: #b5b22e;
+    color: white;
+    margin-top: 10px;
+    height: 40px;
+}
+
+.reset_variations {
+    display: none !important;
+}
+
+.woocommerce-Price-amount .amount {
+
+}
+
+#bunch_keep_in_touch-3 {
+    margin-top: 19px;
+}

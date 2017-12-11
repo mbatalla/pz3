@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAMC;EALA,WAAW,EAAE,uBAAuB;EACjC,GAAG,EAAE,kKAC+E;EACpF,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;ACDlB,sCAAY;EACV,aAAa,EAAE,IAAI;EACnB,aAAa,EAAE,CAAC;AAElB,kDAAsB;EACpB,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,IAAI;AAEpB,oCAAQ;EACN,KAAK,EAAE,KAAK;EACZ,sCAAE;IACA,MAAM,EAAE,OAAO",
+"sources": ["../../../sass/born-ready/born-ready.scss","../../../sass/modules/mailalerts/mailalerts.scss"],
+"names": [],
+"file": "mailalerts.css"
+}

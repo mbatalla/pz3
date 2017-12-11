@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA;;2EAE2E;AAE3E,0BAA2B;EACzB,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;EACV,KAAK,EAAE,CAAC;EACR,SAAS,EAAE,eAAe;EAC1B,yCAA0C;IAL5C,0BAA2B;MAMvB,MAAM,EAAE,YAAY;EAEtB,8BAAI;IACF,SAAS,EAAE,IAAI;IACf,OAAO,EAAE,KAAK;EAGd,0CAAK;IACH,SAAS,EAAE,IAAI;IACf,WAAW,EAAE,IAAI;IACjB,OAAO,EAAE,WAAW;IACpB,eAAe,EAAE,IAAI",
+"sources": ["../../../../../sass/modules/tmrelatedproducts/views/scss/tmrelatedproducts.scss"],
+"names": [],
+"file": "tmrelatedproducts.css"
+}

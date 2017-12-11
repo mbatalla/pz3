@@ -1,0 +1,369 @@
+@import "../../_theme_variables";
+
+/******************************************************************************
+						Home Page Slider
+*******************************************************************************/
+$minHeight: 470px;
+//$ratio: 0.5208;
+$ratio: 0.375;
+#homepage-slider {
+  overflow: hidden;
+  position: relative;
+  #homeslider {
+    margin: 0 auto;
+    padding: 0;
+    min-height: $minHeight;
+    .homeslider-container {
+      position: relative;
+      @media (max-width: $screen-sm-max) {
+        height: 100%;
+      }
+      .homeslider-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .homeslider-description {
+        padding: 15px;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        @include translate(0, -50%);
+        text-align: center;
+        @media (min-width: $screen-xs-min) {
+          padding: 50px;
+        }
+        @media (min-width: $screen-lg-min) {
+          top: 55%;
+        }
+        h2 {
+          font-family: $font-special;
+          position: relative;
+          font-size: 48px;
+          @include stroke(2, #ffffff);
+          line-height: (65 / 45);
+          color: dimgray;
+          text-shadow: 0px 3px 29px rgba(0, 0, 0, 0.16);
+          @media (min-width: $screen-xs-min) {
+            font-size: 65px;
+            @include stroke(2, #ffffff);
+          }
+          @media (min-width: $screen-sm-min) {
+            font-size: 82px;
+            @include stroke(2, #ffffff);
+          }
+          @media (min-width: $screen-lg-min) {
+            font-size: 105px;
+            @include stroke(2, #ffffff);
+          }
+        }
+        p {
+          color: white;
+          position: relative;
+          margin: 0;
+        }
+        .btn {
+          padding: 21px;
+          min-width: 240px;
+          border-radius: 31px;
+          @media (min-width: $screen-md-min) {
+            padding: 25px;
+            min-width: 270px;
+            border-radius: 35px;
+          }
+        }
+        button {
+          position: relative;
+        }
+        * + p {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+/*****************************************************************************
+						BXSlider Styles
+********************************************************************************/
+//RESET AND LAYOUT
+#homepage-slider {
+  .bx-wrapper {
+    position: relative;
+    padding: 0;
+    *zoom: 1;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: $minHeight;
+      min-width: ceil($minHeight / $ratio);
+      @media (max-width: $screen-sm-max) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        @include translate(-50%, -50%);
+      }
+    }
+  }
+  // THEME
+  .bx-wrapper {
+    .bx-viewport {
+      width: 100%;
+      min-height: $minHeight;
+      padding-top: 50px;
+    }
+  }
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 999;
+  }
+  //LOADER
+  .bx-wrapper .bx-loading {
+    min-height: 50px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+  //PAGER
+  .bx-wrapper .bx-pager {
+    text-align: center;
+    font-size: .85em;
+    font-family: $font-family;
+    font-weight: bold;
+    color: #666;
+    padding-top: 20px;
+  }
+  .bx-wrapper .bx-pager .bx-pager-item,
+  .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: none;
+    border: 3px solid #fff;
+    text-indent: -9999px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+  }
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #fff;
+  }
+  //DIRECTION CONTROLS (NEXT / PREV)
+  .bx-wrapper .bx-controls-direction {
+    position: absolute;
+    right: 11px;
+    bottom: 0;
+    background: $light-background;
+    line-height: 0;
+    z-index: 999;
+    @media (min-width: $screen-sm-min) {
+      right: 75px;
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85px;
+      width: 85px;
+      outline: 0;
+      margin: 0;
+      text-align: center;
+      z-index: 999;
+      &:before {
+        @include addIcon('\f104');
+        font-size: 25px;
+        line-height: 85px;
+        color: $color-gray;
+        @include transition(0.3s all ease);
+      }
+      @media (min-width: $screen-lg-min) {
+        height: 120px;
+        width: 120px;
+        &:before {
+          line-height: 120px;
+        }
+      }
+      &.bx-next {
+        &:before {
+          @include addIcon('\f105');
+        }
+        &:after {
+          position: absolute;
+          content: '';
+          top: 23px;
+          bottom: 23px;
+          left: 0;
+          border-left: 1px solid #ebebeb;
+          @include transition(0.3s all ease);
+          @media (min-width: $screen-lg-min) {
+            top: 32px;
+            bottom: 32px;
+          }
+        }
+      }
+      &:hover {
+        background: $base-box-bg;
+        &:before {
+          color: $primary-text-color;
+        }
+      }
+    }
+    &:hover {
+      a.bx-next {
+        &:after {
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+  .bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+  }
+  //AUTO CONTROLS (START / STOP)
+  .bx-wrapper .bx-controls-auto {
+    text-align: center;
+  }
+  .bx-wrapper .bx-controls-auto .bx-start {
+    display: block;
+    width: 10px;
+    height: 11px;
+    outline: 0;
+    margin: 0 3px;
+    &:before {
+      content: '';
+      font-family: $font-icon;
+      color: #fff;
+    }
+  }
+  .bx-wrapper .bx-controls-auto .bx-stop {
+    display: block;
+    width: 9px;
+    height: 11px;
+    outline: 0;
+    margin: 0 3px;
+    &:before {
+      content: '';
+      font-family: $font-icon;
+      color: #fff;
+    }
+  }
+  //PAGER WITH AUTO-CONTROLS HYBRID LAYOUT
+  .bx-wrapper .bx-controls .bx-controls-auto {
+    right: 15px;
+    width: 35px;
+    top: 15px;
+    z-index: 998;
+  }
+  //IMAGE CAPTIONS
+  .bx-wrapper .bx-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #666 \9
+  ;
+    background: rgba(80, 80, 80, 0.75);
+    width: 100%;
+  }
+  .bx-wrapper .bx-caption span {
+    color: $light-text-color;
+    font-family: $font-family;
+    display: block;
+    font-size: .85em;
+    padding: 10px;
+  }
+}
+
+#bx-pager-thumb {
+  text-align: center;
+  padding: 10px 0;
+  a {
+    display: inline-block;
+    max-width: 150px;
+    width: 31%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+
+
+.banner-model {
+  
+  > .picture-block{
+    display: inline-flex;
+    height: 68vh;
+    width: 850px;
+    align-self: flex-end;
+    margin: 0;
+
+    @media (max-width: $screen-lg-min) {
+      height: 90vh;
+      width: 380px;
+      margin: 0 15px;
+    }
+
+    @media (max-width: $screen-sm-min) {
+      height: 90vh;
+      width: 350px;
+    }
+
+    @media (max-width: $screen-xs-min) {
+
+      width: 220px;
+    }
+
+    > .img-responsive{
+      position: absolute;
+      height: auto;
+      min-height: inherit !important;
+      min-width: inherit !important;
+      width: 45% !important;
+      top: 0% !important;
+      left: 10%;
+
+      @media (max-width: $screen-lg) {
+        left: 3% !important;
+        top: 25% !important;
+        width: 55% !important;
+      }
+      @media (max-width: $screen-lg-min) {
+        width: 45% !important;
+        top: 40% !important;
+        left: 30% !important;
+      }
+      
+      @media (max-width: $screen-xs-min) {
+        width: 90% !important;
+        top: 25% !important;
+        transform: translateX(0%)!important;
+        left: 10% !important;
+      }
+    }
+  }
+}

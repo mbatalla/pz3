@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*
+* @subsection   History Page Styles
+*/
+#order-detail-content table .return_quantity {
+  min-width: 180px; }
+  #order-detail-content table .return_quantity .return_quantity_buttons {
+    margin-top: 3px; }
+    #order-detail-content table .return_quantity .return_quantity_buttons a {
+      display: none;
+      float: left; }
+      #order-detail-content table .return_quantity .return_quantity_buttons a + a {
+        margin-left: 3px; }
+  #order-detail-content table .return_quantity .order_qte_input {
+    display: none;
+    width: 123px;
+    text-align: center; }
+  #order-detail-content table .return_quantity label {
+    font-weight: 400; }
+
+.table td.history_detail a + a {
+  margin-left: 14px; }
+.table td.step-by-step-date {
+  width: 105px; }
+.table tfoot strong {
+  color: #767676; }
+
+.info-order i {
+  font-size: 20px; }
+  .info-order i.icon-gift {
+    color: #fe5b66; }
+  .info-order i.icon-repeat {
+    color: #05d484; }
+
+@media (max-width: 767px) {
+  #submitReorder {
+    overflow: hidden; }
+    #submitReorder .pull-right {
+      float: none !important; } }
+
+#sendOrderMessage {
+  margin-bottom: 30px; }
+  #sendOrderMessage select.form-control {
+    width: 263px; }
+
+/*# sourceMappingURL=history.css.map */

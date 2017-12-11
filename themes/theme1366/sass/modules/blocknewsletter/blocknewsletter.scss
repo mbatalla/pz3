@@ -1,0 +1,161 @@
+@import "../../_theme_variables";
+
+/* Block newsletter */
+#columns #newsletter_block_left {
+  .form-group {
+    margin-bottom: 0;
+    .form-control {
+      max-width: 100%;
+      display: block;
+    }
+    &.email-error {
+      .form-control {
+        border-color: #f00;
+      }
+    }
+    &.email-valid {
+      .form-control {
+        border-color: #0C3;
+      }
+    }
+  }
+  .success_inline, .warning_inline {
+    text-align: left;
+    padding: 1px 0 0 0;
+    margin-bottom: -19px;
+  }
+  .success_inline {
+    color: $color-succes;
+  }
+  .warning_inline {
+    color: $color-warning;
+  }
+}
+
+/* Block newsletter footer */
+#footer {
+  #newsletter_block_left {
+    margin: 0;
+    @media (min-width: $screen-sm-min) {
+      padding-bottom: 20px;
+    }
+    h4 {
+      background: none;
+      padding: 7px 16px 5px 0;
+      font: $font-heading;
+      text-transform: uppercase;
+      border: none;
+      margin-bottom: 8px;
+      &:after {
+        display: none;
+      }
+    }
+    p {
+      font-size: 18px;
+      text-align: center;
+    }
+    .block_content {
+      margin: 0;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+      margin-top: 30px;
+      text-align: center;
+      @media (min-width: $screen-xs-min) {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      }
+      .form-control {
+        height: 60px;
+        line-height: 30px;
+        background: $light-background;
+        border: none;
+        padding: 5px 31px;
+        display: block;
+        box-shadow: none;
+        @media (max-width: $screen-xs-min - 1) {
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        &:focus {
+          @include box-shadow(black 0 0 0);
+        }
+      }
+      .btn {
+        border-radius: 0;
+        background: $dark-background;
+        color: $light-text-color;
+        box-shadow: none;
+        white-space: nowrap;
+        @media (min-width: $screen-xs-min) {
+          min-width: 150px;
+        }
+        @media (min-width: $screen-sm-min) {
+          min-width: 190px;
+          margin-left: 19px;
+        }
+        @media (min-width: 1360px) {
+          min-width: 270px;
+        }
+        @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+        &:hover {
+          background: $primary-background;
+        }
+      }
+    }
+    .warning_inline {
+      display: block;
+      color: $color-warning;
+      font-size: 13px;
+      line-height: 26px;
+      clear: both;
+      @media (min-width: $screen-lg) { // min 1200px
+        display: inline-block;
+        position: relative;
+        top: -35px;
+        margin-bottom: -35px;
+        left: 15px;
+        clear: none;
+      }
+    }
+    .form-group {
+      &.email-error .form-control {
+        @include box-shadow(inset 0 0 1px $color-warning);
+      }
+      &.email-valid .form-control {
+        @include box-shadow(inset 0 0 1px $color-succes);
+      }
+    }
+  }
+}
+
+#newsletter_block_left {
+  p.alert {
+    margin: 10px 0;
+    padding-left: 35px;
+    &:before {
+      display: none;
+    }
+    .close {
+      font-size: 21px;
+      position: absolute;
+      left: 10px;
+      top: 9px;
+      font-weight: normal;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+      color: $color-warning;
+    }
+    &.alert-success {
+      .close {
+        color: $color-succes;
+      }
+    }
+  }
+}

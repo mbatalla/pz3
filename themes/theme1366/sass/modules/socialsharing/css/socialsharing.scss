@@ -1,0 +1,58 @@
+@import '../../../_theme_variables';
+@import "../../../_elements_variables";
+
+/* -------*--------------------------------------------------------------------------------------------------------
+										 Social Sharing 
+------------------------------------------------------------------------------------------------------------------- */
+.btn.btn-facebook,
+.btn.btn-twitter,
+.btn.btn-google-plus,
+.btn.btn-pinterest {
+  border: none;
+  margin-bottom: 3px;
+  padding: 0;
+  background: none;
+  &:hover {
+    color: $primary-text-color;
+  }
+  span {
+    display: none;
+  }
+  i {
+    display: none;
+  }
+  &:before {
+    font-size: 14px;
+  }
+}
+
+.socialsharing_product button {
+  margin-bottom: 3px;
+  & + button {
+    margin-left: 28px;
+  }
+}
+
+.btn.btn-facebook {
+  &:hover, &:focus {
+    color: #435f9f;
+  }
+}
+
+.btn.btn-twitter {
+  &:hover, &:focus {
+    color: #00aaf0;
+  }
+}
+
+.btn.btn-google-plus {
+  &:hover, &:focus {
+    color: #e04b34;
+  }
+}
+
+.btn.btn-pinterest {
+  &:hover, &:focus {
+    color: #ce1f21;
+  }
+}

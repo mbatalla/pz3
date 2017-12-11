@@ -1,0 +1,862 @@
+@version: "?ver=1.2.6";
+
+.background-clip(@clip) {
+    -webkit-background-clip: @clip;
+            background-clip: @clip;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+.box-sizing(@sizing) {
+    -webkit-box-sizing: @sizing;
+       -moz-box-sizing: @sizing;
+            box-sizing: @sizing;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+            transition: @transition;
+}
+
+label {
+    cursor: pointer;
+}
+
+p.description {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: normal;
+    margin: 2px 0 5px;
+    color: #666;
+}
+
+#main {
+    .hidden,
+    .mpsl-hidden,
+    .mpsl-hide-options,
+    .mpsl-dependency-hide {
+        display: none;
+    }
+}
+
+.wide {
+    width: 100%;
+}
+
+.mpsl-sort-icon {
+    cursor: move;
+    background: url("../img/sprite.png@{version}") no-repeat 0 -15px;
+    width: 20px;
+    height: 15px;
+}
+
+// Clearfix
+// -----------------------------------------------------------------------------
+
+.clearfix {
+    display: inline-block;
+
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}
+
+html[xmlns] .clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+// Messages
+// -----------------------------------------------------------------------------
+
+#mpsl-info-box {
+    position: fixed;
+    top: 40px;
+    right: 15px;
+    z-index: 10001; // Must be over preloader
+
+    .mpsl-message {
+        padding: 20px;
+        background: #fff;
+        color: #454545;
+        max-width: 400px;
+        width: 400px;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 10px;
+        .box-shadow(1px 1px 2px 0px rgba(128, 128, 128, 0.7));
+        .box-sizing(border-box);
+    }
+
+    .mpsl-message-error {
+        border-left: 4px solid #dd3d36;
+    }
+
+    .mpsl-message-warning {
+        border-left: 4px solid #ffa500;
+    }
+
+    .mpsl-message-success {
+        border-left: 4px solid #7ad03a;
+    }
+}
+
+// Widefat table
+// -----------------------------------------------------------------------------
+
+.widefat {
+    border-spacing: 0;
+    width: 100%;
+    clear: both;
+    margin: 0;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    .box-shadow(0 1px 1px rgba(0, 0, 0, 0.04));
+
+    th {
+        text-align: left;
+        padding: 8px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+
+    thead {
+        th {
+            background: #fff;
+            border-bottom: 1px solid #e1e1e1;
+        }
+    }
+
+    tbody {
+        td {
+            vertical-align: top;
+            padding: 8px 10px;
+        }
+    }
+
+    &.fixed {
+        max-width: 800px;
+        table-layout: fixed;
+    }
+}
+
+// Dialogs & Priview
+// -----------------------------------------------------------------------------
+
+.mpsl-preview-dialog {
+    &.ui-dialog {
+        z-index: 10001;
+
+        .mpsl-slider-preview {
+            background-color: #eee;
+        }
+    }
+
+    .mpsl-slider-preview {
+        height: auto;
+    }
+
+    iframe {
+        width: 100%;
+        height: 85%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.mpsl-slider-preview {
+    .mpsl-resolution-buttons-wrapper {
+        padding: 10px;
+        text-align: center;
+
+        .container {
+            display: inline-block;
+            cursor: pointer;
+
+            .item {
+                float: left;
+                width: 51px;
+                height: 40px;
+                margin-left: 13px;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &.hidden {
+                    display: none;
+                }
+
+                &.desktop {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat 0 0;
+                }
+                &.tablet {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat -65px 0;
+                }
+                &.mobile {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat -129px 0;
+                }
+
+                &.desktop.active,
+                &.desktop:hover {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat  0 -67px;
+                }
+                &.tablet.active,
+                &.tablet:hover {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat -65px -67px;
+                }
+                &.mobile.active,
+                &.mobile:hover {
+                    background: url("../img/preview-sprite.png@{version}") no-repeat -129px -67px;
+                }
+            }
+        }
+    }
+}
+
+.mpsl-template-dialog {
+    .ui-dialog-titlebar {
+        display: none;
+    }
+
+    .mpsl-templates-table {
+        border: none;
+        box-shadow: none;
+        padding-top: 15px;
+
+        input {
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+#mpsl-slider-preset-wrapper {
+    height: auto !important;
+    max-height: 680px !important;
+}
+
+#mpsl-product-preview-table tbody p {
+    margin: 0;
+}
+
+// Button Groups
+// -----------------------------------------------------------------------------
+
+.button-group {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0;
+    vertical-align: middle;
+
+    .button {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 26px;
+        height: 28px;
+        margin: 0;
+        padding: 0 10px 1px;
+        cursor: pointer;
+        border-width: 1px;
+        border-style: solid;
+        -webkit-appearance: none;
+        white-space: nowrap;
+        color: #555;
+        border-color: #ccc;
+        background: #f7f7f7;
+        vertical-align: top;
+        .border-radius(3px);
+        .box-shadow(e("inset 0 1px 0 #fff, 0 1px 0 rgba(0, 0, 0, 0.08)"));
+        .box-sizing(border-box);
+
+        &.active,
+        &.active:hover,
+        &:active {
+            background: #eee;
+            border-color: #999;
+            color: #32373c;
+            .box-shadow(inset 0 2px 5px -3px rgba(0, 0, 0, 0.5));
+        }
+    }
+
+    & > .button {
+        display: inline-block;
+        margin-right: -1px;
+        z-index: 10;
+        .border-radius(0);
+
+        &:first-child {
+            .border-radius(3px 0 0 3px);
+        }
+
+        &:last-child {
+            .border-radius(0 3px 3px 0);
+        }
+    }
+
+    &.button-large {
+        height: 30px;
+        line-height: 28px;
+
+        .button {
+            height: 30px;
+            line-height: 28px;
+            padding: 0 12px 2px;
+        }
+    }
+}
+
+// Button Dropdowns
+// -----------------------------------------------------------------------------
+
+.mpsl-button-dropdown {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    > .dropdown-toggle {
+        > .caret {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 0px;
+            vertical-align: middle;
+            border-top: 4px dashed;
+            border-top: 4px solid\9;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+        }
+    }
+
+    > .dropdown-menu {
+        cursor: pointer;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 5000;
+        display: none;
+        float: left;
+        min-width: 220px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        .background-clip(padding-box);
+        .border-radius(4px);
+        .box-shadow(0 6px 12px rgba(0, 0, 0, 0.175));
+
+        > li {
+            padding: 3px 20px;
+            line-height: 1.5em;
+
+            &:hover {
+                background-color: #f5f5f5;
+            }
+
+            &.divider {
+                padding: 0;
+                height: 1px;
+                margin: 9px 0;
+                overflow: hidden;
+                background-color: #e5e5e5;
+            }
+        }
+    }
+
+    > .mpsl-add-layer {
+        margin-right: 0px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    > .mpsl-add-layer + .dropdown-toggle {
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &.open {
+        > .dropdown-toggle {
+            outline: 0;
+            .box-shadow(inset 0 3px 5px rgba(0, 0, 0, 0.125));
+        }
+
+        > .dropdown-menu {
+            display: block;
+        }
+    }
+}
+
+.control-label .mpsl-button-dropdown {
+    margin-left: 6px;
+}
+
+// Align control
+// -----------------------------------------------------------------------------
+
+.mpsl-align-table {
+    table-collapse: collapse;
+
+    td {
+        border: 1px solid #999;
+        padding: 1px;
+
+        a {
+            text-decoration: none;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #bdc3c7;
+
+            &:hover {
+                background-color: #7F8C8D;
+            }
+
+            &.selected {
+                background-color: #7F8C8D;
+                cursor: default;
+
+                &:hover{
+                    cursor: default;
+                    background-color: #7F8C8D;
+                }
+            }
+        }
+    }
+}
+
+// Preloader
+// -----------------------------------------------------------------------------
+
+.mpsl-preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-image: url("../img/loading.gif@{version}");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: 10000;
+}
+
+// Main wrapper
+// -----------------------------------------------------------------------------
+
+#content.bootstrap {
+
+    // PrestaShop Styles
+    // ------------------------------------------------------------------
+
+    .form-horizontal .actions {
+        padding-top: 7px;
+    }
+
+    .tabs-list-group {
+        margin-bottom: 0;
+
+        .list-group-item {
+            display: inline-block;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: none;
+        }
+    }
+
+    .tabs-panel {
+        border-top-left-radius: 0;
+    }
+
+    .panel h3.panel-alternate-title {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+
+    .table .default-table-cell-padding {
+        padding: 8px;
+    }
+
+    // MotoPress Styles
+    // ------------------------------------------------------------------
+
+    h3.no-margin {
+        margin: 0;
+    }
+
+    .mpsl-hook {
+        border-bottom: 1px dotted;
+    }
+
+    #mpsl-layer-settings {
+        textarea {
+            resize: vertical;
+        }
+
+        #mpsl_text {
+            min-height: 100px;
+        }
+
+        .mpsl-option-wrapper > label {
+            display: block;
+            text-align: left;
+        }
+
+        .form-horizontal .form-group {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+
+            .form-group:last-child {
+                margin-bottom: 0;
+            }
+
+            &.mpsl-option-checkbox {
+                margin-top: -15px;
+            }
+        }
+    }
+
+    .mpsl-export-table tbody tr.table-row {
+        cursor: pointer;
+    }
+
+    .mpsl-option.mpsl-option-image_url .mpsl-option-image-load-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #mpsl-slide-settings-tabs .tab {
+        display: none;
+    }
+
+    .mpsl-layers-table > tbody > tr,
+    .mpsl-layer-presets-table > tbody > tr {
+        cursor: pointer;
+    }
+
+    .mpsl-media-library .mpsl-media-item .mpsl-media-name {
+        height: 3.5em;
+    }
+}
+
+// Media library
+// -----------------------------------------------------------------------------
+
+.mpsl-media-library {
+    .mpsl-media-item {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        margin: 0 5px 0 0;
+        padding: 3px;
+        .box-shadow(inset 0 0 0 1px #aaa);
+
+        &.active {
+            .box-shadow(e("inset 0 0 0 1px #fff, inset 0 0 0 4px #1e8cbe"));
+        }
+
+        .mpsl-media-name {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.5em;
+            padding: 0.5em 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            cursor: pointer;
+
+            > span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .mpsl-media-image {
+            display: table-cell;
+            width: 152px;
+            height: 152px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 0;
+            cursor: pointer;
+
+            // Preview size
+            img {
+                max-width: 150px;
+                max-height: 150px;
+            }
+        }
+
+        .mpsl-media-delete {
+            display: none;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            padding: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            color: brown;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.75);
+
+                &:before {
+                    content: "Delete ";
+                }
+            }
+        }
+
+        &:hover {
+            .mpsl-media-name {
+                display: table;
+            }
+
+            .mpsl-media-delete {
+                display: inline-block;
+            }
+        }
+    }
+
+    .dropzone {
+        border: 4px dashed #b4b9be;
+        padding: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .mpsl-media-form {
+        margin-top: 12px;
+    }
+
+    &.in-frame {
+        display: none;
+
+        .mpsl-media-back {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 10000;
+            background-color: #000;
+            opacity: 0.7;
+        }
+
+        .mpsl-media-tabs {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            z-index: 10001;
+        }
+    }
+}
+
+// Animation preview & select list
+// -----------------------------------------------------------------------------
+
+.mpsl-animation-editor {
+
+    // .ui-dialog .ui-dialog-content.mpsl-animation-editor
+    .ui-dialog .ui-dialog-content& {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    // Left wrapper elements
+    // ------------------------------------------------------------------
+
+    .mpsl-animation-left-wrapper {
+        float: left;
+        width: 75%;
+        height: 100%;
+        border: 1px solid #dedede;
+        padding-bottom: 59px;
+        .box-sizing(border-box);
+    }
+
+    .mpsl-animation-scene-wrapper {
+        height: 100%;
+        overflow: auto;
+        .box-sizing(border-box);
+    }
+
+    .mpsl-animation-scene {
+        width: 100%;
+        height: 80%;
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        .box-sizing(initial);
+    }
+
+    .mpsl-animation-preview-wrapper {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 50%;
+
+        // <h1>
+        .mpsl-animation-preview {
+            font-size: 40px;
+            line-height: 40px;
+            margin: 0;
+            color: #3c3c3c;
+        }
+    }
+
+    .mpsl-play-animation {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+
+        > i {
+            margin: 0 5px;
+        }
+    }
+
+    .mpsl-timing-and-duration {
+        height: 20%;
+        width: 100%;
+        display: table;
+        border-top: 1px solid #dedede;
+        padding: 10px 0;
+        .box-sizing(border-box);
+
+        .mpsl-controls {
+            display: table-cell;
+            vertical-align: middle;
+
+            .control-label {
+                margin: 0 0 0 30px;
+                padding-top: 6px;
+            }
+
+            .form-group {
+                margin: 0 0 0 10px;
+            }
+        }
+
+        .mpsl-option {
+            margin-left: 30px;
+            display: inline-block;
+            vertical-align: top;
+
+            select,
+            input {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    // Right wrapper elements
+    // ------------------------------------------------------------------
+
+    .mpsl-animation-right-wrapper {
+        height: 100%;
+        width: 25%;
+        float: left;
+    }
+
+    .mpsl-option-select_list {
+        height: 100%;
+    }
+
+    // Not tested out of animation preview dialog
+    .mpsl-select-list-box {
+        height: 100%;
+        width: 100%;
+        border-top: 1px solid #dedede;
+        border-right: 1px solid #dedede;
+        padding-bottom: 59px;
+        overflow: hidden;
+        .box-sizing(border-box);
+
+        .mpsl-select-list-scroller {
+            overflow: auto;
+            height: 100%;
+            padding: 0;
+            .box-sizing(border-box);
+        }
+
+        // <ul>
+        .mpsl-select-list {
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            list-style: none;
+
+            li {
+                margin: 0;
+                padding: 5px 10px;
+
+                &:nth-child(odd) {
+                    background-color: #f9f9f9;
+                }
+
+                &.active {
+                    background-color: #e5e5e5;
+                }
+            }
+        }
+    }
+
+    // Bottom wrapper elements
+    // ------------------------------------------------------------------
+
+    .mpsl-animation-bottom-wrapper {
+        border-top: 1px solid #dedede;
+        clear: both;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 14px 10px;
+        background: #ffffff;
+    }
+}

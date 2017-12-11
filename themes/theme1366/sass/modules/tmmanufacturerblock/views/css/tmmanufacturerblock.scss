@@ -1,0 +1,89 @@
+@import "../../../../_theme_variables";
+
+/**************************************************************************
+		        Style TM Manufacturer Block
+**************************************************************************/
+
+#tm_manufacturers_block {
+  margin-top: 50px;
+  @media (min-width: $screen-lg-min) {
+    margin-top: 112px;
+  }
+  h4 {
+    font: $font-heading;
+    color: $base-heading-color;
+    text-align: center;
+    margin: 0 0 34px;
+  }
+  .manufacturers_items {
+    .manufacturer_item {
+      a {
+        img {
+          opacity: 0.48;
+          @include transition(0.4s all ease);
+          will-change: opacity;
+        }
+        &:hover {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .bx-wrapper {
+    .manufacturers_items {
+      margin: 0;
+      li {
+        &.caroucel_item {
+          width: 25%;
+        }
+      }
+    }
+    .bx-controls {
+      .bx-pager {
+        .bx-pager-link {
+          &.active,
+          &:hover {
+            background: #777;
+          }
+        }
+      }
+      .bx-controls-direction a {
+        height: 30px;
+        width: 30px;
+        color: #aab2b5;
+        text-align: center;
+        &:before {
+          @include addIcon('\f105');
+          font-size: 25px;
+          line-height: 30px;
+          color: inherit;
+        }
+        &.bx-prev {
+          left: 0;
+          @media (min-width: $screen-md-min) {
+            left: -25px;
+          }
+          &:before {
+            content: '\f104';
+          }
+        }
+        &.bx-next {
+          right: 0;
+          @media (min-width: $screen-md-min) {
+            right: -25px;
+          }
+        }
+        &:hover {
+          color: $primary-text-color;
+        }
+        &.disabled {
+          display: inline-block;
+          color: lighten(#aab2b5, 20%);
+          cursor: default;
+        }
+      }
+    }
+  }
+}

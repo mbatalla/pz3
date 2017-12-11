@@ -1,0 +1,116 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow(@style, @color) when (iscolor(@color)) {
+    -webkit-box-shadow: @style @color;
+       -moz-box-shadow: @style @color;
+            box-shadow: @style @color;
+}
+
+.mpsl-hide-script {
+    display: none;
+}
+
+.mpsl-layer,
+#footer .mpsl-layer { // Don't let the #footer overwrite our styles
+    // Buttons
+    // ------------------------------------------------------------------
+    .mpsl-button() {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        padding: 12px 28px 13px;
+        text-decoration: none;
+        color: #fff;
+        .border-radius(5px);
+    }
+
+    .mpsl-button-red,
+    .mpsl-button-red:hover {
+        .mpsl-button();
+        background-color: #e75d4a;
+        text-shadow: 0px 1px 0px #c03826;
+        .box-shadow(0px 2px 0px 0px, #cd3f2b);
+    }
+
+    .mpsl-button-green,
+    .mpsl-button-green:hover {
+        .mpsl-button();
+        background-color: #58cf6e;
+        text-shadow: 0px 1px 0px #17872d;
+        .box-shadow(0px 2px 0px 0px, #2ea044);
+    }
+
+    .mpsl-button-blue,
+    .mpsl-button-blue:hover {
+        .mpsl-button();
+        background-color: #e75d4a;
+        text-shadow: 0px 1px 0px #c03826;
+        .box-shadow(0px 2px 0px 0px, #cd3f2b);
+    }
+
+    // Header
+    // ------------------------------------------------------------------
+    .mpsl-header() {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 48px;
+        letter-spacing: -0.025em;
+    }
+
+    .mpsl-header-dark {
+        .mpsl-header();
+        color: #000;
+    }
+
+    .mpsl-header-white {
+        .mpsl-header();
+        color: #fff;
+    }
+
+    // Subheader
+    // ------------------------------------------------------------------
+    .mpsl-sub-header() {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 26px;
+        padding: 14px;
+    }
+
+    .mpsl-sub-header-dark {
+        .mpsl-sub-header();
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+
+    .mpsl-sub-header-white {
+        .mpsl-sub-header();
+        background-color: rgba(255, 255, 255, 0.6);
+        color: #000;
+    }
+
+    // Text
+    // ------------------------------------------------------------------
+    .mpsl-text() {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .mpsl-text-dark {
+        .mpsl-text();
+        color: #000;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    }
+
+    .mpsl-text-white {
+        .mpsl-text();
+        color: #fff;
+        text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.45);
+    }
+}

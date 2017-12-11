@@ -1,0 +1,229 @@
+/**
+ * 2002-2016 TemplateMonster
+ *
+ * TM Media Parallax
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the General Public License (GPL 2.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/GPL-2.0
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the module to newer
+ * versions in the future.
+ *
+ *  @author    TemplateMonster
+ *  @copyright 2002-2016 TemplateMonster
+ *  @license   http://opensource.org/licenses/GPL-2.0 General Public License (GPL 2.0)
+ */
+@import "../../../../_theme_variables";
+
+.rd-parallax-layer .text-layout, .rd-parallax-layer .parallax-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rd-parallax-inner {
+  clip: rect(0px auto auto 0px);
+}
+
+.top-z-index {
+  z-index: 1;
+}
+
+.top-parallax, .background-video, .home-parallax-1, .home-parallax-2 {
+  position: relative;
+  .text-layout {
+    text-align: center;
+    will-change: transform;
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: $dark-text-color;
+      margin: 0;
+      @media (min-width: $screen-lg-min) {
+        font-size: 16px;
+      }
+    }
+    h2 {
+      position: relative;
+      font-family: $font-custom;
+      font-size: 50px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0;
+      @media (min-width: $screen-lg-min) {
+        font-size: 70px;
+      }
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+    .btn {
+      @media (min-width: $screen-lg-min) {
+        min-width: 195px;
+      }
+    }
+    * + h2 {
+      margin-top: 9px;
+    }
+    * + p {
+      margin-top: 18px;
+      @media (min-width: $screen-lg-min) {
+        margin-top: 34px;
+      }
+    }
+    p + p {
+      margin-top: 28px;
+    }
+    &.text-left {
+      left: 10%;
+      width: 70%;
+      @include translate(0, -50%);
+      text-align: left;
+      @media (min-width: $screen-xs-min) {
+        width: 45%;
+      }
+    }
+  }
+  &.white-text {
+    color: $light-text-color;
+    .text-layout h2 {
+      color: $light-text-color;
+    }
+  }
+  .video-bg {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(#000, 0.34);
+      z-index: 9999991;
+    }
+  }
+}
+
+.top-parallax {
+  background: $product-background;
+  &:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 8%;
+    bottom: 8%;
+    left: 7%;
+    right: 7%;
+    border: 20px solid $light-border-color;
+    @media (min-width: $screen-xs-min) {
+      left: 12%;
+      right: 12%;
+    }
+    @media (min-width: 1650px) {
+      top: 17%;
+      bottom: 17%;
+    }
+  }
+  .col-xs-12 {
+    padding-bottom: 33.8%;
+    min-height: 420px !important;
+  }
+  .text-layout {
+    h2 {
+      color: $primary-text-color;
+      padding-bottom: 12px;
+      margin-bottom: 10px;
+      @media (min-width: $screen-lg-min) {
+        padding-bottom: 30px;
+        margin-bottom: 20px;
+      }
+      &:before {
+        display: block;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        content: '';
+        width: 160px;
+        margin-left: -80px;
+        border-bottom: 1px solid #e7e7e7;
+      }
+    }
+  }
+}
+
+.background-video {
+  .col-xs-12 {
+    padding-bottom: 41.3%;
+    min-height: 420px !important;
+  }
+  .text-layout {
+    color: $light-text-color;
+    .btn {
+      &.btn-default {
+        color: $primary-text-color;
+        @media (min-width: $screen-lg-min) {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        &:hover {
+          color: $light-text-color;
+        }
+      }
+    }
+  }
+}
+
+.home-parallax-1, .home-parallax-2 {
+  margin-top: 30px;
+  @media (min-width: $screen-lg-min) {
+    margin-top: 55px;
+  }
+  .col-xs-12 {
+    padding-bottom: 31.25%;
+    min-height: 420px;
+  }
+  .text-layout {
+    padding-bottom: 15px;
+    width: 90%;
+    @media (min-width: $screen-xs-min) {
+      width: 45%;
+    }
+    h2 {
+      color: $dark-text-color;
+      line-height: (6/ 5);
+      font-size: 22px;
+      @media (min-width: $screen-sm-min) {
+        font-size: 35px;
+      }
+      @media (min-width: $screen-lg-min) {
+        font-size: 50px;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      * + p {
+        margin-top: 23px;
+      }
+      p + p {
+        margin-top: 45px;
+      }
+    }
+
+  }
+}
+
+.home-parallax-2 {
+  .col-xs-12 {
+    padding-bottom: 30.47%;
+  }
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAMC;EALA,WAAW,EAAE,uBAAuB;EACjC,GAAG,EAAE,kKAC+E;EACpF,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;ACHtB,2BAA2B;AAEzB,wCAAa;EACX,cAAc,EAAE,CAAC;EACjB,aAAa,EAAE,CAAC;EAChB,aAAa,EAAE,IAAI",
+"sources": ["../../../sass/born-ready/born-ready.scss","../../../sass/modules/blockviewed/blockviewed.scss"],
+"names": [],
+"file": "blockviewed.css"
+}

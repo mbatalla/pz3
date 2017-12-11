@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/*
+* @section      Right to Left Styles
+*/
+* {
+  direction: rtl !important; }
+
+#page {
+  text-align: right !important; }
+
+/*# sourceMappingURL=rtl.css.map */

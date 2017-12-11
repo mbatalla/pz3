@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* -------*--------------------------------------------------------------------------------------------------------
+										 Social Sharing 
+------------------------------------------------------------------------------------------------------------------- */
+.btn.btn-facebook,
+.btn.btn-twitter,
+.btn.btn-google-plus,
+.btn.btn-pinterest {
+  border: none;
+  margin-bottom: 3px;
+  padding: 0;
+  background: none; }
+  .btn.btn-facebook:hover,
+  .btn.btn-twitter:hover,
+  .btn.btn-google-plus:hover,
+  .btn.btn-pinterest:hover {
+    color: #009fe3; }
+  .btn.btn-facebook span,
+  .btn.btn-twitter span,
+  .btn.btn-google-plus span,
+  .btn.btn-pinterest span {
+    display: none; }
+  .btn.btn-facebook i,
+  .btn.btn-twitter i,
+  .btn.btn-google-plus i,
+  .btn.btn-pinterest i {
+    display: none; }
+  .btn.btn-facebook:before,
+  .btn.btn-twitter:before,
+  .btn.btn-google-plus:before,
+  .btn.btn-pinterest:before {
+    font-size: 14px; }
+
+.socialsharing_product button {
+  margin-bottom: 3px; }
+  .socialsharing_product button + button {
+    margin-left: 28px; }
+
+.btn.btn-facebook:hover, .btn.btn-facebook:focus {
+  color: #435f9f; }
+
+.btn.btn-twitter:hover, .btn.btn-twitter:focus {
+  color: #00aaf0; }
+
+.btn.btn-google-plus:hover, .btn.btn-google-plus:focus {
+  color: #e04b34; }
+
+.btn.btn-pinterest:hover, .btn.btn-pinterest:focus {
+  color: #ce1f21; }
+
+/*# sourceMappingURL=socialsharing.css.map */

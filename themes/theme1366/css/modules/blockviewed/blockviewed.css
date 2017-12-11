@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+/* Block Viewed Products */
+#viewed-products_block_left li.last_item {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none; }
+
+/*# sourceMappingURL=blockviewed.css.map */

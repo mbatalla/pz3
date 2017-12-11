@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'born_ready_altregular';
+  src: url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff2") format("woff2"), url("//pz.cl/themes/theme1366/fonts/bornready_alt-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+.tags_block .block_content {
+  overflow: hidden; }
+  .tags_block .block_content a {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 4px 9px 5px 9px;
+    border: 1px solid #ebebeb;
+    float: left;
+    margin: 0 3px 3px 0; }
+    .tags_block .block_content a:hover {
+      color: #767676;
+      background: #f6f6f6; }
+
+/*# sourceMappingURL=blocktags.css.map */
