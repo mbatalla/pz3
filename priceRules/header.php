@@ -12,6 +12,9 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="combination.php">Corrector combinaciones</a>
       </li>
+      <li class="nav-item">
+        <a href="product_info.php" class="nav-link">Product Info</a>
+      </li>
     </ul>
     <a href="controllers/clear.php" onclick="return confirm('¿Estás seguro de que quieres elimniar todos los descuentos?')" class="btn btn-danger" style="margin-right: 20px"><span class="glyphicon glyphicon-trash"></span> Eliminar todas las reglas</a>
     <form class="form-inline my-2 my-lg-0" method="post" action="controllers/uploader.php" enctype="multipart/form-data">
