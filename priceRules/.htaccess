@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Por favor inicia sesión para gestionar los descuentos."
-AuthUserFile /var/www/html/pz2.cl/priceRules/.htpasswd
-Require valid-user

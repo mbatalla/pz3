@@ -14,6 +14,18 @@
 			<link rel="shortcut icon" type="image/png" href="<?php echo esc_url($icon_href);?>">
 		<?php endif;?>
 		<?php wp_head(); ?>
+		<script>
+			var interval = 0;
+			function updateActiveElement() {
+			if($(document.activeElement).attr('id') == "fb-iframe") {
+					clearInterval(interval);
+					bodyClicked = true;
+				}
+			}
+			$(function() {
+				interval = setInterval("updateActiveElement();", 50);
+			});
+		</script>
 	</head>
 	<body <?php body_class(); ?>>
 	

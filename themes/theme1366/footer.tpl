@@ -44,12 +44,6 @@
   {literal}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32000308-6"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-32000308-6');
-
   /* <![CDATA[ */
     var google_conversion_id = 837584716;
     var google_conversion_label = "FydDCKKa3ncQzI6yjwM";

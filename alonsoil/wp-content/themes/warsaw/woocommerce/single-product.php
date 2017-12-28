@@ -20,13 +20,6 @@ $bg = warsaw_set($meta1, 'header_img');
 $title = warsaw_set($meta1, 'header_title');
 get_header( 'shop' ); ?>
 
-<!--Page Title-->
-<section class="page-title" <?php if($bg):?>style="background-image:url('<?php echo esc_url($bg)?>');"<?php endif;?>>
-    <div class="auto-container">
-        <h1><?php if($title) echo balanceTags($title); else wp_title('');?></h1>
-    </div>
-</section>
-
 <!--Shop Single-->
 <div class="shop-single warsaw-detail-shop">
     <section class="product-details">

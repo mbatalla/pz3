@@ -81,30 +81,47 @@
     <div id="page">
       <div class="header-container">
         <header id="header">
-          {capture name='displayBanner'}{hook h='displayBanner'}{/capture}
-          {if $smarty.capture.displayBanner}
-            <div class="banner">
-              <div class="container">
-                <div class="row">
-                  {$smarty.capture.displayBanner}
+          {if $page_name !='order'}
+            {capture name='displayBanner'}{hook h='displayBanner'}{/capture}
+            {if $smarty.capture.displayBanner}
+              <div class="banner">
+                <div class="container">
+                  <div class="row">
+                    {$smarty.capture.displayBanner}
+                  </div>
                 </div>
               </div>
-            </div>
+            {/if}
           {/if}
           {assign var='displayMegaHeader' value={hook h='tmMegaLayoutHeader'}}
           {if isset($HOOK_TOP) || $displayMegaHeader}
             {if $displayMegaHeader}
-              {$displayMegaHeader}
-            {else}
-              {capture name='displayNav'}{hook h='displayNav'}{/capture}
-              {if $smarty.capture.displayNav}
-                <div class="nav">
-                  <div class="container">
-                    <div class="row">
-                      <nav>{$smarty.capture.displayNav}</nav>
+              {if $page_name !='order'}
+                {$displayMegaHeader}
+              {else}
+                <div class="container" style="padding-top: 25px;">
+                  <div class="row">
+                    <div id="header_logo">
+                      <a href="{if isset($force_ssl) && $force_ssl}{$base_dir_ssl}{else}{$base_dir}{/if}" title="{$shop_name|escape:'html':'UTF-8'}">
+                        <img class="logo img-responsive" src="{$logo_url}" alt="{$shop_name|escape:'html':'UTF-8'}"{if isset($logo_image_width) && $logo_image_width} width="{$logo_image_width}"{/if}{if isset($logo_image_height) && $logo_image_height} height="{$logo_image_height}"{/if}/>
+                      </a>
                     </div>
+                    {* {$HOOK_TOP} *}
                   </div>
                 </div>
+              {/if}
+            {else}
+              {if $page_name !='order'}
+                {capture name='displayNav'}{hook h='displayNav'}{/capture}
+                {if $smarty.capture.displayNav}
+                  <div class="nav">
+                    <div class="container">
+                      <div class="row">
+                        <nav>{$smarty.capture.displayNav}</nav>
+                      </div>
+                    </div>
+                  </div>
+                {/if}
               {/if}
               <div>
                 <div class="container">
@@ -119,6 +136,7 @@
                 </div>
               </div>
             {/if}
+
             {if Module::isEnabled('blockwishlist')}
               <div class="wishlist-link">
                 <a href="{$link->getModuleLink('blockwishlist', 'mywishlist', array(), true)|escape:'html':'UTF-8'}" title="{l s='My wishlists' mod='blockwishlist'}"><span>{l s='Wishlist'}</span></a>
@@ -129,7 +147,7 @@
       </div>
       <div class="columns-container">
         <div id="columns">
-          {if $page_name !='index' && $page_name !='pagenotfound'}
+          {if $page_name !='index' && $page_name !='pagenotfound' && $page_name !='order'}
             {include file="$tpl_dir./breadcrumb.tpl"}
           {/if}
           <div id="slider_row">

@@ -1161,10 +1161,10 @@ img{
 
 .sec-title-one{
 	position:relative;
-	padding-top:70px;
-	padding-bottom:10px;
+	padding-top:30px;
+	padding-bottom:5px;
 	text-align:center;
-	margin-bottom:50px;
+	margin-bottom:20px;
 }
 
 .sec-title-one:before{
@@ -1173,8 +1173,8 @@ img{
 	left:0px;
 	top:0px;
 	width:100%;
-	height:80px;
-	background:url(images/icons/icon-crops.png) center top no-repeat;
+	height:40px;
+	/*background:url(images/icons/icon-crops.png) center top no-repeat;*/
 }
 
 .sec-title-one:after{
@@ -1252,7 +1252,7 @@ img{
 .intro-section .inner-part .content-box{
 	position:relative;
 	top:-200px;
-	padding:60px 110px 0px;
+	padding:60px 110px 60px;
 	background:#ffffff;
 	margin-bottom:65px;
 }
@@ -1273,7 +1273,7 @@ img{
 	z-index:1;
 }
 
-.intro-section .inner-part .content-box .inner-box:after{
+/*.intro-section .inner-part .content-box .inner-box:after{
 	content:'';
 	position:absolute;
 	bottom:-250px;
@@ -1283,7 +1283,7 @@ img{
 	height:510px;
 	background:url(images/resource/crop-image-right.png) center top no-repeat;
 	z-index:1;
-}
+}*/
 
 .intro-section .inner-part .content-box:after{
 	content:'';
@@ -4797,7 +4797,8 @@ img{
 	text-align:center;
 	display:block;
 	border:1px solid #f0f0f0;
-	transition:all 500ms ease;		
+	transition:all 500ms ease;	
+	padding-top: 30px;	
 }
 
 .default-shop-item .inner-box:hover{
@@ -4988,7 +4989,7 @@ img{
 
 .shop-single .product-details{
 	position:relative;
-	padding:120px 0px 70px;	
+	padding:30px 0px 70px;	
 }
 
 .product-details .basic-details{
@@ -5002,7 +5003,6 @@ img{
 }
 
 .product-details .image-column .image-box{
-	border:1px solid #e0e0e0;
 	background:#ffffff;	
 }
 
@@ -6023,4 +6023,79 @@ img{
 .your-order .coupon-code .form-group button{
 	display:block;
 	width:100%;	
+}
+
+
+
+.variedades-aceites{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.variedades-aceites > li {
+	display: inline-block !important;
+	text-align: center;
+	width: calc((100% / 7) - 12px);
+	line-height: 2.5em;
+	padding-top: 220px;
+	color: #FFF;
+	position: relative;
+	overflow: hidden;
+}
+
+.variedades-aceites > li > IMG {
+	display: block;
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	left: -30px;
+	bottom: -30px;
+	fill: rgba(255,255,255,.4);
+	z-index: 0;
+}
+.variedades-aceites > li > div {
+	position: absolute;
+	display: block;
+	width: calc(100% - 55px);
+	bottom: 20px;
+	right: 20px;
+	font-size: 1.5em;
+	z-index: 1;
+	text-align: right;
+}
+
+.variedades-aceites > li + li {
+	margin-left: 10px;
+}
+
+.variedades-aceites > li:nth-child(1){
+	background-color: #da812d;
+}
+
+.variedades-aceites > li:nth-child(2){
+	background-color: #a8c78a;
+}
+
+.variedades-aceites > li:nth-child(3){
+	background-color: #a32431;
+}
+
+.variedades-aceites > li:nth-child(4){
+	background-color: #cfad39;
+}
+
+.variedades-aceites > li:nth-child(5){
+	background-color: #7c2d89;
+}
+
+.variedades-aceites > li:nth-child(6){
+	background-color: #4f8a81;
+}
+
+.variedades-aceites > li:nth-child(7){
+	background-color: #466a3e;
 }

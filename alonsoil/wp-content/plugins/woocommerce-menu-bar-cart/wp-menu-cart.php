@@ -1,14 +1,16 @@
 <?php
-/*
-Plugin Name: WooCommerce Menu Cart
-Plugin URI: www.wpovernight.com/plugins
-Description: Extension for WooCommerce that places a cart icon with number of items and total cost in the menu bar. Activate the plugin, set your options and you're ready to go! Will automatically conform to your theme styles.
-Version: 2.6.0
-Author: Jeremiah Prummer, Ewout Fernhout
-Author URI: www.wpovernight.com/
-License: GPL2
-Text Domain: wpmenucart
-*/
+/**
+ * Plugin Name: WooCommerce Menu Cart
+ * Plugin URI: www.wpovernight.com/plugins
+ * Description: Extension for WooCommerce that places a cart icon with number of items and total cost in the menu bar. Activate the plugin, set your options and you're ready to go! Will automatically conform to your theme styles.
+ * Version: 2.6.1
+ * Author: Jeremiah Prummer, Ewout Fernhout
+ * Author URI: www.wpovernight.com/
+ * License: GPL2
+ * Text Domain: wpmenucart
+ * WC requires at least: 2.0.0
+ * WC tested up to: 3.2.0
+ */
 
 class WpMenuCart {	 
 
@@ -278,6 +280,8 @@ class WpMenuCart {
 		if (isset($this->options['icon_display'])) {
 			wp_register_style( 'wpmenucart-icons', plugins_url( '/css/wpmenucart-icons.css', __FILE__ ), array(), '', 'all' );
 			wp_enqueue_style( 'wpmenucart-icons' );
+			wp_register_style( 'wpmenucart-fontawesome', plugins_url( '/css/wpmenucart-fontawesome.css', __FILE__ ), array(), '', 'all' );
+			wp_enqueue_style( 'wpmenucart-fontawesome' );
 		}
 		
 		$css = file_exists( get_stylesheet_directory() . '/wpmenucart-main.css' )
@@ -286,6 +290,11 @@ class WpMenuCart {
 
 		wp_register_style( 'wpmenucart', $css, array(), '', 'all' );
 		wp_enqueue_style( 'wpmenucart' );
+
+		// Hide built-in theme carts
+		if ( isset($this->options['hide_theme_cart']) ) {
+			wp_add_inline_style( 'wpmenucart', '.et-cart-info { display:none !important; } .site-header-cart { display:none !important; }' );
+		}
 
 		//Load Stylesheet if twentytwelve is active
 		if ( wp_get_theme() == 'Twenty Twelve' ) {
@@ -298,6 +307,22 @@ class WpMenuCart {
 			wp_register_style( 'wpmenucart-twentyfourteen', plugins_url( '/css/wpmenucart-twentyfourteen.css', __FILE__ ), array(), '', 'all' );
 			wp_enqueue_style( 'wpmenucart-twentyfourteen' );
 		}		
+
+		// extra script that improves AJAX behavior when 'Always display cart' is disabled
+		wp_enqueue_script(
+			'wpmenucart-ajax-assist',
+			plugins_url( '/javascript/wpmenucart-ajax-assist.js', __FILE__ ),
+			array( 'jquery' )
+		);
+		wp_localize_script(
+			'wpmenucart-ajax-assist',
+			'wpmenucart_ajax_assist',
+			array(  
+				'shop_plugin' => isset($this->options['shop_plugin']) ? $this->options['shop_plugin'] : '',
+				'always_display' => isset($this->options['always_display']) ? $this->options['always_display'] : '',
+			)
+		);
+
 	}
 
 	/**

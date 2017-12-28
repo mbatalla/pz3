@@ -15,13 +15,14 @@
 	$bg = warsaw_set($meta1, 'header_img');
 	$title = warsaw_set($meta1, 'header_title');
 ?>
-
+<?php if(!is_product()): ?>
 <!--Page Title-->
 <section class="page-title" <?php if($bg):?>style="background-image:url('<?php echo esc_url($bg)?>');"<?php endif;?>>
     <div class="auto-container">
         <h1><?php if($title) echo wp_kses_post($title); else wp_title('');?></h1>
     </div>
 </section>
+<?php endif; ?>
 
 <!--Sidebar Page-->
 <div class="sidebar-page-container">

@@ -3,18 +3,6 @@ $options = _WSH()->option();
     get_header(); 
 ?>
 
-<!--Page Title-->
-<section class="page-title">
-    <div class="auto-container">
-        <!--Bread Crumb-->
-        <div class="bread-crumb">
-            <div class="links-outer">
-            	<?php echo balanceTags(warsaw_get_the_breadcrumb()); ?>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!--  Your page Content End Here -->
 <div class="error_page container">
     <div class="row">

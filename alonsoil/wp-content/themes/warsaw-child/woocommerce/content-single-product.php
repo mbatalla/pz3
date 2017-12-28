@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div itemscope id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div>
-        <div class="image-column col-md-4 col-sm-5 col-xs-12">
+        <div class="image-column col-md-5 col-sm-6 col-xs-12">
         	<figure class="image-box">
             <?php
 				/**
@@ -46,7 +46,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             </figure>
         </div>
         
-        <div class="info-column col-md-8 col-sm-7 col-xs-12">
+        <div class="info-column col-md-7 col-sm-6 col-xs-12">
     
             <?php
                 /**

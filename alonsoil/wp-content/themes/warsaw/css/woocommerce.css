@@ -1,6 +1,9 @@
 .clear, .woocommerce .woocommerce-breadcrumb::after, .woocommerce .woocommerce-error::after, .woocommerce .woocommerce-info::after, .woocommerce .woocommerce-message::after {
     clear: both;
 }
+.woocommerce div.product {
+        margin-bottom: 30px !important;
+}
 .woocommerce div.product form.cart .reset_variations, .woocommerce form .form-row label.hidden {
     visibility: hidden;
 }
@@ -341,6 +344,8 @@ p.demo_store a {
 }
 .woocommerce div.product form.cart .variations label {
     font-weight: 700;
+    color: #565656;
+    font-size: 14px;
 }
 .woocommerce div.product form.cart .variations select {
     float: left;
