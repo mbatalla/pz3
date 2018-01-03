@@ -124,7 +124,9 @@
 						// }else{
 						// 	$message .= " pero hubo un error marcando el producto como oferta.";
 						// }
-						array_push($result, $message);
+						if(array_push($result, $message)){
+							$idp++;
+						};
 					}
 					}else{
 						$err = "La query no corrió correctamente para el producto ".$sheetData[$i]['A']." - Id: ".$pid->id_product.".";
@@ -143,7 +145,9 @@
 						// 	$message .= " pero hubo un error marcando el producto como oferta.";
 						// }
 
-						array_push($result, $message);
+						if(array_push($result, $message)){
+							$idp++;
+						};
 					}
 					}else{
 						$err = "La query no corrió correctamente para el producto ".$sheetData[$i]['A']." - Id: ".$pid->id_product.".";

@@ -1,0 +1,25 @@
+28-12-2017 09:31:37
+		Inicio de transaccion:2142nRequest :wsInitTransactionInput Object
+(
+    [wSTransactionType] => TR_NORMAL_WS
+    [commerceId] => 2142
+    [buyOrder] => 2142
+    [sessionId] => 2142
+    [returnURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=tx_compra
+    [finalURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=exito
+    [transactionDetails] => wsTransactionDetail Object
+        (
+            [sharesAmount] => 
+            [sharesNumber] => 
+            [amount] => 3510
+            [commerceCode] => 597032772145
+            [buyOrder] => 2142
+        )
+
+    [wPMDetail] => 
+)
+Datos recibidosnResponse wsInitTransactionOutput Object
+(
+    [token] => e469152d58ec62742f68958734b9acf24e45bb8520a66bc10a868c5885be3ede
+    [url] => https://webpay3g.transbank.cl:443/filtroUnificado/initTransaction
+)

@@ -15,8 +15,8 @@ SetEnv HTTP_MOD_REWRITE On
 RewriteEngine on
 
 
-#Domain: pz.cl
-RewriteRule . - [E=REWRITEBASE:/]
+#Domain: 127.0.0.1
+RewriteRule . - [E=REWRITEBASE:/prestashop/]
 RewriteRule ^api$ api/ [L]
 
 RewriteRule ^api/(.*)$ %{ENV:REWRITEBASE}webservice/dispatcher.php?url=$1 [QSA,L]
@@ -88,7 +88,7 @@ FileETag none
 </IfModule>
 
 #If rewrite mod isn't enabled
-ErrorDocument 404 /index.php?controller=404
+ErrorDocument 404 /prestashop/index.php?controller=404
 
 # ~~end~~ Do not remove this comment, Prestashop will keep automatically the code outside this comment when .htaccess will be generated again
 

@@ -1,0 +1,50 @@
+28-12-2017 10:37:59
+		Inicio de transaccion:2137nRequest :wsInitTransactionInput Object
+(
+    [wSTransactionType] => TR_NORMAL_WS
+    [commerceId] => 2137
+    [buyOrder] => 2137
+    [sessionId] => 2137
+    [returnURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=tx_compra
+    [finalURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=exito
+    [transactionDetails] => wsTransactionDetail Object
+        (
+            [sharesAmount] => 
+            [sharesNumber] => 
+            [amount] => 59990
+            [commerceCode] => 597032772145
+            [buyOrder] => 2137
+        )
+
+    [wPMDetail] => 
+)
+Datos recibidosnResponse wsInitTransactionOutput Object
+(
+    [token] => e1fe7bf857f747ea7153c0081dcc818b3b8376e1ab4d8f30bf992b65e8f89536
+    [url] => https://webpay3g.transbank.cl:443/filtroUnificado/initTransaction
+)
+28-12-2017 14:44:41
+		Inicio de transaccion:2137nRequest :wsInitTransactionInput Object
+(
+    [wSTransactionType] => TR_NORMAL_WS
+    [commerceId] => 2137
+    [buyOrder] => 2137
+    [sessionId] => 2137
+    [returnURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=tx_compra
+    [finalURL] => http://200.68.52.46/index.php?fc=module&module=webpay&controller=exito
+    [transactionDetails] => wsTransactionDetail Object
+        (
+            [sharesAmount] => 
+            [sharesNumber] => 
+            [amount] => 59990
+            [commerceCode] => 597032772145
+            [buyOrder] => 2137
+        )
+
+    [wPMDetail] => 
+)
+Datos recibidosnResponse wsInitTransactionOutput Object
+(
+    [token] => e2d7044584a0075f4a4d7632088ffc1a1c200adc8010f39b7b155bd03b992064
+    [url] => https://webpay3g.transbank.cl:443/filtroUnificado/initTransaction
+)
